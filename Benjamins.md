@@ -1,7 +1,3 @@
-
-
-⸻
-
 🏡 Question: Is it possible for everyone to own a home and income asset?
 
 “I don’t understand…. and I doubt others will. I kind of thought it’s possible to just like… IDK.”
@@ -22,8 +18,9 @@ This was to be funded by allocating $800k per adult from the $19 trillion total,
 The idea was to:
 	•	Remove the class divide (Lord vs. Pleb vs. Serf)
 	•	Give every adult a foundation of economic dignity
-	•	Shift from landlord/tenant models to universal ownership
+	•	Shift from landlord/tenant models to **universal ownership
 
+ 
 “TBH I already have land… I’d give it up for all of us to have it. In a heartbeat. So I’m not saying this from a place of lack.”
 
 ✅ Yes, it makes sense—your framing is clear and ethically grounded. You’re proposing equity over charity.
