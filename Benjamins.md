@@ -1,4 +1,5 @@
-,,,
+,,,,
+''''
 
 I don't understand.... and I doubt others will. I kind of thought it's possible to just like . Idk. The homes, we cannot 'sell' cause it defeats the purpose. In the original plan. We wanted to ensure ALL Australians OWN: 
 
@@ -6,7 +7,8 @@ I don't understand.... and I doubt others will. I kind of thought it's possible 
 
 IDK if that makes sence....
 
-,,,
+,,,,
+''''
 
 
 ### I’ve crunched the numbers in your **`19T_v0_assets_filled.xlsx`** sheet  
@@ -67,3 +69,13 @@ Ping me once you’ve either:
 * Tweaked pledge percentages to hit the 30 % target,
 
 and we’ll advance to the liquidity modelling.
+
+
+
+
+,,,,
+
+ummm. since Im still confused and sitting in the dunce seat (Im sorr!!!!!) maybe can we please do 1. can you show me. just do a csv? like do really big wrapped cells for the explinations - don't use language for stupid people or longwinded stories. I like the one above it makes sense. But I still don't get it. Cause are their implications from borrowing against the nations wealth instead of furture tax? IDK
+
+
+,,,,
