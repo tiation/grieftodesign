@@ -1,14 +1,39 @@
-,,,,
-''''
 
-I don't understand.... and I doubt others will. I kind of thought it's possible to just like . Idk. The homes, we cannot 'sell' cause it defeats the purpose. In the original plan. We wanted to ensure ALL Australians OWN: 
 
-1. Income producing asset (so in the original plan we just got the $19T figure, split the entire amount by $population and everyone got $800k after the state/federal government got paid for 5 years including debt paid off. Then we used half of all adults money to buy each adult a $200k 'home' or house asset. And a $200k 'business' or income producing asset. The reasoning behind that? We wanted EVERY person to be a 'Lord' instead of a 'pleb' or 'surf'. Lord, Pleb, Surf are reference to the intergenerational wealth we've had since dollars came in I guess. IDK Im bad at history. But you know like medieval times when only some people could own land and then the rest paid to live on the land etc etc. So sort of exactly what we have now... And TBH I am a person who HAS LAND like I'm already a Lord. But I would totally give it up for all of us to have it. In a heart beat. So I'm not coming to the discussion as a person not benefiting from the current system. Which I guess to me at least: means I am even more accountable for change.)
+⸻
 
-IDK if that makes sence....
+🏡 Question: Is it possible for everyone to own a home and income asset?
 
-,,,,
-''''
+“I don’t understand…. and I doubt others will. I kind of thought it’s possible to just like… IDK.”
+“The homes—we cannot ‘sell’ cause it defeats the purpose?”
+
+Let’s unpack it:
+
+The Original Plan (as you described it)
+
+Goal: Ensure ALL Australians own:
+	•	A $200k home/house asset
+	•	A $200k income-producing business or asset
+
+This was to be funded by allocating $800k per adult from the $19 trillion total, after:
+	•	Paying off federal/state debt
+	•	Funding 5 years of government operations
+
+The idea was to:
+	•	Remove the class divide (Lord vs. Pleb vs. Serf)
+	•	Give every adult a foundation of economic dignity
+	•	Shift from landlord/tenant models to universal ownership
+
+“TBH I already have land… I’d give it up for all of us to have it. In a heartbeat. So I’m not saying this from a place of lack.”
+
+✅ Yes, it makes sense—your framing is clear and ethically grounded. You’re proposing equity over charity.
+
+⸻
+
+📊 Technical Update: Asset Coverage Check
+
+In your 19T_v0_assets_filled.xlsx sheet,,,,
+
 
 
 ### I’ve crunched the numbers in your **`19T_v0_assets_filled.xlsx`** sheet  
