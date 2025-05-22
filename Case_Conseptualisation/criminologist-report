@@ -1,0 +1,91 @@
+### Literature Review
+
+**Parental Momentary Lapse Fatalities in Australia (2013-2024):  Criminological Theory, Case-law Trends and Relevance to a WA “Failure-to-Protect” Allegation**
+
+---
+
+#### 1 | Scope & Method
+
+This review analyses Australian coronial findings and superior-court decisions where a child (0-5 yrs) died by **drowning, toxic ingestion or a high-fall** during an otherwise attentive parent’s short lapse.  Five representative cases are compared with two manslaughter convictions to illuminate the threshold separating *tragic accident* from *criminal negligence*.  Statutory focus is **Children and Community Services Act 2004 (WA) s 101** (failure to protect). ([AustLII][1])
+
+---
+
+#### 2 | Criminological Framework
+
+| Theory                                     | Application to Infant–Caregiver Incidents                                                                                                                                                            |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Routine-Activity** (Cohen & Felson)      | Harm requires a *vulnerable target* (infant), *hazard* (water / balcony / toxin) and *absence of capable guardian*.  Momentary lapses create a brief “convergence”, usually without criminal intent. |
+| **Situational Opportunity / SCP** (Clarke) | Engineering controls (pool gates, bath plugs, baby gates) reduce risk.  Courts ask whether a *reasonable parent* deployed obvious situational barriers.                                              |
+| **Criminal Negligence Doctrine**           | In Australian manslaughter, prosecution must prove a **gross departure** from reasonable care (*R v Patel* principle).  Mere inadvertence = no mens rea.                                             |
+| **Strain / Stress Models**                 | Domestic-violence trauma or mental-health burden can impair vigilance but does not, by itself, create intent.                                                                                        |
+
+---
+
+#### 3 | Accidental-Death Precedents (No Charges)
+
+| # | Case                                                                                                                                            | Brief Facts       | Lapse                                                                                                                                                                  | Coroner / Court Finding |
+| - | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| 1 | **TPL (WA 2013)** – 6 mo drowned when a Bumbo seat in a shower tipped while mother stepped away feeling unwell.                                 | 5-7 min           | *Accidental.* Emphasised constant supervision and warned about bath aids; no referral for prosecution. ([Coroner's Court of Western Australia][2], [SBS Australia][3]) |                         |
+| 2 | **“T” (QLD 2015)** – 15 mo wandered through a propped pool gate during brief indoor absence.                                                    | <10 min           | Coroner: preventable but not criminal; urged compliant gates. ([Queensland Courts][4])                                                                                 |                         |
+| 3 | **Master K (VIC 2021)** – 2-yr toddler slipped from toddler pool into deep water while mother was metres away, distracted by phone and sibling. | 2-3 min           | Coroner: inadequate supervision, yet prosecution declined; treated as tragedy. ([The Guardian][5])                                                                     |                         |
+| 4 | **Child Z (QLD 2014)** – 2 yr fell into farm cattle dip 400 m from house; parents believed gate shut.                                           | 15-20 min         | Accidental; coroner highlighted rural hazards, no charges. ([Queensland Courts][6])                                                                                    |                         |
+| 5 | **Sydney Bathtub (NSW 2022)** – Mother with postnatal psychosis drowned infant; court found *not criminally responsible* (mental illness).      | Immediate episode | Illustrates mental-health defence—no mens rea despite fatal act. ([ABC][7])                                                                                            |                         |
+
+**Common coronal language:** “momentary lapse”, “brief absence”, “no prior neglect”, “immediate emergency response”.
+
+---
+
+#### 4 | Conviction Comparators (Gross Negligence Established)
+
+| Case                                                                                                                                  | Aggravating Elements                                         | Outcome                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| **Daniel Gallagher (Qld Sup Ct 2022)** – left 9-mo in filling bath, went outside to smoke and use phone.                              | Prolonged absence, knew tap running, non-essential activity. | Pleaded **manslaughter**, 9-yr sentence (parole after 4½). ([7NEWS][8]) |
+| **Lavinia Murray (Qld Sup Ct 2023)** – left 7-mo in laundry sink with tap on while doing household chores; drain blocked by clothing. | Multiple tasks, several minutes, obstruction risk.           | **Manslaughter**, 5 yrs (suspended after 18 mo). ([7NEWS][9])           |
+
+Courts emphasised **duration**, **foreseeability**, and **caregiver distraction for personal convenience**, satisfying the “reckless indifference” limb of unlawful-killing.
+
+---
+
+#### 5 | Comparative Analysis
+
+| Dimension                 | Accidental Group                                                              | Convicted Group                                                           | Relevance to Current WA Matter                                                                 |
+| ------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **Supervision gap**       | Seconds–few minutes; parent in adjacent area; often line-of-sight assumed.    | Several minutes to >30 min; parent outside house or asleep / intoxicated. | Mother believed infant remained in view while using toilet; lapse very short.                  |
+| **Risk awareness**        | No prior incidents; hazards thought controlled (gate, seat, sibling present). | Parent aware of running water / open hazard; ignored obvious risk.        | Bath routine normal; infant had never left room before; baby gates scheduled for installation. |
+| **Response behaviour**    | Immediate CPR / 000 call; cooperative with police.                            | Delayed discovery or initial dishonesty in some cases.                    | Mother called ambulance instantly, performed CPR.                                              |
+| **Intent / mental state** | No intent; no reckless disregard.                                             | Reckless indifference (phone, smoke) or contributory impairment (drugs).  | No distraction beyond ordinary childcare; no substances.                                       |
+| **Legal outcome**         | Coroners issue safety recommendations; **no charges**.                        | Manslaughter (criminal negligence) convictions.                           | Facts align with accidental cohort, not with convicted cases.                                  |
+
+---
+
+#### 6 | Implications under WA s 101 (“Failing to Protect”)
+
+* **Mens rea test** – s 101 requires *knowledge* or *recklessness* that conduct **may result in harm**. ([AustLII][1])
+* The accidental precedents show coroner and DPP restraint unless there is a **gross departure** from expected supervision.
+* Gallagher & Murray illustrate the prosecution threshold: **prolonged absence + conscious choice** to prioritise non-urgent activity over child safety.
+
+Given the mother’s **helicopter parenting history, immediate rescue attempt, and absence of aggravating factors**, the case is doctrinally analogous to TPL, T and Master K, not to Gallagher or Murray.  Criminological routine-activity analysis supports the view that the tragic outcome arose from an unpredictable confluence of infant mobility and a split-second visibility gap—not from culpable neglect.
+
+---
+
+#### 7 | Conclusion & Defence Leverage
+
+1. **Empirical trend:** Australian authorities rarely prosecute where lapse < 5 min, hazard not obviously foreseeable, and parent’s conduct shows care.
+2. **Theory alignment:** Routine-activity and situational-crime-prevention frameworks characterise such fatalities as *opportunistic accidents*, not crimes.
+3. **Case law:** The mother’s fact pattern is consistent with *accidental* jurisprudence; manslaughter precedents are distinguishable on recklessness/absence duration.
+
+**Strategic use:** Cite the accidental precedents to argue that prosecuting an otherwise diligent parent would depart from national practice and the proportionality principle embedded in s 101.
+
+---
+
+*Prepared 22 May 2025 by \[Louisa Jeffery], Criminologist*
+
+[1]: https://classic.austlii.edu.au/au/legis/wa/consol_act/cacsa2004318/s101.html?utm_source=chatgpt.com "CHILDREN AND COMMUNITY SERVICES ACT 2004 - SECT 101"
+[2]: https://coronerscourt.wa.gov.au/I/inquest_into_the_death_of_tpl_a_child_subject_to_a_suppression_order.aspx?utm_source=chatgpt.com "Inquest into the Death of TPL (a child Subject to a Suppression Order)"
+[3]: https://www.sbs.com.au/news/article/wa-babys-drowning-death-a-timely-reminder/7ptxr7u84?utm_source=chatgpt.com "WA baby's drowning death a timely reminder | SBS News"
+[4]: https://www.courts.qld.gov.au/__data/assets/pdf_file/0011/450794/cif-t-20151218.pdf?utm_source=chatgpt.com "OFFICE OF THE STATE CORONER FINDINGS OF INQUEST - Queensland Courts"
+[5]: https://www.theguardian.com/australia-news/2024/nov/12/tragic-death-of-toddler-at-melbourne-hotel-pool-while-mother-used-phone-prompts-coroners-call-for-better-supervision?utm_source=chatgpt.com "'Tragic death' of toddler at Melbourne hotel pool while mother used phone prompts coroner's call for better supervision"
+[6]: https://www.courts.qld.gov.au/__data/assets/pdf_file/0008/447974/cif-child-z-20150913.pdf?utm_source=chatgpt.com "OFFICE OF THE STATE CORONER FINDINGS OF INVESTIGATION - Queensland Courts"
+[7]: https://www.abc.net.au/news/2022-12-13/mother-avoids-jail-for-drowning-baby-in-bathtub/101765842?utm_source=chatgpt.com "Sydney mother not criminally responsible for drowning baby in bathtub ..."
+[8]: https://7news.com.au/news/qld/queensland-man-jailed-for-manslaughter-after-leaving-baby-girl-to-drown-in-bathtub-c-7585958?utm_source=chatgpt.com "Queensland man jailed for manslaughter after leaving baby girl ... - 7NEWS"
+[9]: https://7news.com.au/news/mother-jailed-after-childrens-underwear-blocks-drain-causing-baby-to-drown-in-tub-c-14434637?utm_source=chatgpt.com "Mother learns fate over baby daughter’s drowning death"
