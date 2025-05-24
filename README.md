@@ -2,6 +2,7 @@
 we start again... not from zero but from loss
 
 # The Grief-to-Design Blueprint
+![image](https://github.com/user-attachments/assets/2dd052a7-fe0d-4119-aebc-0bc8e3dab711)
 
 ## Purpose
 
