@@ -1,0 +1,1 @@
+Systems designer turning grief into transformative change | Creator of the $19 Trillion Solution | Converting national wealth into universal safety, education & dignity | "Fix the system. People aren't broken." | Criminologist & parent building a world where accidents aren't random, but preventable by design | 🌐 19T.au
