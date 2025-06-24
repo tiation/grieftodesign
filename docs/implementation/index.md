@@ -24,6 +24,25 @@ How the $19 Trillion Solution fundamentally addresses the root causes of crime a
 ### 4. [Educational Transformation](educational-transformation.md)
 The evolution of education from a job-preparation system to a lifelong process of curiosity, discovery, and contribution enabled by the freedom from economic pressure.
 
+## Detailed Financial Analysis
+
+Comprehensive financial documentation can be found in the [financials directory](../../financials/), including:
+
+### 1. [Wealth Composition Analysis](../../financials/reports/wealth-composition.md)
+Detailed breakdown of Australia's $19.4 trillion in national wealth, including sources, distribution, accessibility, and historical context.
+
+### 2. [Distribution Calculations Model](../../financials/models/distribution-calculations.md)
+Mathematical framework showing exactly how wealth is allocated across the population, with detailed per-capita calculations.
+
+### 3. [Economic Stability Framework](../../financials/models/economic-stability.md)
+Mechanisms to maintain economic stability during and after implementation, addressing inflation, market function, and productivity.
+
+### 4. [Asset Flow Visualizations](../../financials/visualizations/asset-flow.md)
+Flowcharts showing how wealth moves through the system from national sources to individual benefits.
+
+### 5. [Long-term Sustainability Plan](../../financials/reports/sustainability-plan.md)
+Framework for maintaining the system beyond the initial 5-year period, ensuring ongoing benefits and system evolution.
+
 ## Implementation Principles
 
 Across all aspects of the $19 Trillion Solution, these core principles guide implementation:

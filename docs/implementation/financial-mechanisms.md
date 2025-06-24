@@ -186,3 +186,13 @@ Long-term sustainability measures include:
 ---
 
 This technical framework addresses the economic mechanics that make the $19 Trillion Solution viable and sustainable. By combining innovative financial technology with careful economic management, we can unlock Australia's wealth for all citizens while maintaining system stability.
+
+## Detailed Financial Documentation
+
+For comprehensive mathematical models, detailed breakdowns, and in-depth analysis of the financial mechanisms described here, please refer to our detailed financial documentation:
+
+- [Wealth Composition Analysis](../../financials/reports/wealth-composition.md) - Detailed breakdown of Australia's $19.4 trillion in national wealth
+- [Distribution Calculations Model](../../financials/models/distribution-calculations.md) - Mathematical basis for all allocations
+- [Economic Stability Framework](../../financials/models/economic-stability.md) - Comprehensive stability mechanisms
+- [Asset Flow Visualizations](../../financials/visualizations/asset-flow.md) - Visual representation of wealth flows
+- [Long-term Sustainability Plan](../../financials/reports/sustainability-plan.md) - Ongoing viability beyond year 5
