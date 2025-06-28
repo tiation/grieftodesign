@@ -84,7 +84,41 @@ This blueprint is my promise turned into process.
 
 ---
 
+## Three Brands, One Mission
+
+### 💰 **$19T** - "I'm selfish  so are you."
+*Converting Australia's $19 trillion national wealth into real opportunities for every citizen*
+
+### 🐰 **Chase White Rabbit** - "People aren't broken. Fix the system."
+*Following curiosity to find systemic solutions through research and analysis*
+
+### 🌍 **Tiation** - "Get bored of it."
+*Solving problems until they're routine, then moving to the next challenge*
+
+---
+
+## The $19 Trillion Solution
+
+**[Full Homepage: index.md](./index.md)**
+
+Australia sits on $19 trillion in net national wealth. Our solution:
+- **Universal Asset Allocation**: $200k housing + $200k business credit for every adult
+- **Income Security**: $800/week for 5 years from asset dividends
+- **Debt Elimination**: Pay off all public debt
+- **System Transformation**: From scarcity to abundance-based governance
+
+---
+
 ## Documentation Structure
+
+### Core Research
+- [Reality Check: $19T Solution](./research/reality-check-19t-solution.md) - Mathematical and political feasibility analysis
+- [Trust-First Governance Mechanics](./research/trust-first-mechanics.md) - How abundance enables trust-based systems
+- [People Are Good Governance](./research/people-are-good-governance.md) - Governance models assuming human goodness
+- [Pure Trust Governance](./research/pure-trust-governance.md) - Complete trust-first framework
+
+### Legislation & Policy
+- [Companion Acts Complete](./legislation/companion-acts-complete.md) - All 12 acts for systemic transformation
 
 ### Implementation Framework
 - [Personal Tragedy to Systemic Safety](from-tragedy-to-safety.md) - The personal story that inspired this work
