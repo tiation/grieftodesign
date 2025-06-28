@@ -243,3 +243,36 @@ Because once you see your loved ones loss the only real justice is prevention.
 
 > "We start again — not from zero, but from loss."
 
+## Transferred Content and Case Studies
+
+This repository now includes additional documentation transferred from related projects that demonstrate grief-to-design principles in action:
+
+### 📚 **Core Case Studies**
+- **[19 Trillion Solution](docs/19-trillion-solution/)** - A comprehensive example of systemic redesign based on personal experience with economic insecurity
+  - [Personal Story & Motivation](docs/19-trillion-solution/PREFACE.md) - How personal loss led to systemic solutions
+  - [Complete Solution Overview](docs/19-trillion-solution/INDEX.md) - Full blueprint for transformation
+  - [Integration Guide](docs/19-trillion-solution/integration-with-grief-to-design.md) - How this aligns with grief-to-design principles
+
+### 🛠️ **Infrastructure & System Design**
+- **[Infrastructure Principles](docs/infrastructure/)** - Fault-resistant design principles applicable to social systems
+  - [Mesh Network Principles](docs/infrastructure/mesh-network-principles.md) - Decentralized, resilient connectivity
+  - [Fault-Resistant Design](docs/infrastructure/fault-resistant-design.md) - Building systems that survive disruption
+  - [Deployment Strategies](docs/infrastructure/deployment-strategies.md) - Practical implementation approaches
+
+### 🌟 **Systemic Design References**
+- **[Systemic Design Examples](docs/systemic-design/)** - Additional examples of abundance-based system design
+  - [Abundant Systems Reference](docs/systemic-design/abundant-systems-reference.md) - Technology serving abundance rather than scarcity
+
+### 📖 **Navigation & Integration**
+- **[📋 Transferred Content Index](docs/transferred-content-index.md)** - Complete overview and integration guide
+- **[📊 Transfer Summary](TRANSFER_SUMMARY.md)** - Details of what was transferred and when
+
+### 🎯 **Key Integration Points**
+The transferred content demonstrates:
+1. **Personal Loss → Systemic Solutions** - Real examples of grief-to-design in practice
+2. **Abundance-Based Thinking** - Moving from scarcity to abundance models
+3. **Fault-Resistant Design** - Building systems that prevent future harm
+4. **Democratic Participation** - Citizen-centered governance models
+5. **Whole-System Transformation** - Complete rather than incremental change
+
+---
