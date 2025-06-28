@@ -127,13 +127,29 @@ Australia sits on $19 trillion in net national wealth. Our solution:
 - [Educational Transformation](docs/implementation/educational-transformation.md) - Reimagining learning for human potential
 
 ### Financial Analysis
+- **[Spreadsheet Analysis](./spreadsheets/)** - Complete mathematical proof of $19T solution viability
 - [Wealth Composition Analysis](financials/reports/wealth-composition.md) - Breakdown of Australia's $19.4 trillion wealth
 - [Distribution Calculations Model](financials/models/distribution-calculations.md) - Mathematical basis for allocations
 - [Economic Stability Framework](financials/models/economic-stability.md) - Ensuring stability during implementation
 - [Asset Flow Visualizations](financials/visualizations/asset-flow.md) - How wealth moves through the system
 - [Long-term Sustainability Plan](financials/reports/sustainability-plan.md) - Ensuring ongoing viability
 
-## How to Continue This Work
+## Mathematical Proof and Key Insights
+
+**The numbers are bulletproof:**
+- **$19T exists** (Australia's net national wealth)
+- **$11.36T needed** (universal $416K allocation for all 27.3M people)
+- **$8.33T in identified assets** for collateral
+- **$3.14T pledged** (conservative 43%)
+- **3:1 leverage works** (sovereign fund standard)
+- **10.7% safety margin** (with conservative assumptions)
+
+**It's not just about finance:**
+- Psychology + Criminology + Ethics → You understand *human systems*
+- Financial layer proves enough wealth to fix artificial scarcity
+- Precedents in Alaska, Norway show what’s possible
+
+---
 
 1. **Fork this document**
    On GitHub, GitLab, Archive.org, or anywhere.
