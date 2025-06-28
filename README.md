@@ -128,6 +128,7 @@ Within the VPN Mesh, we've integrated a **Community Pulse** system - a lightweig
 - **Purpose:** Build team morale and maintain communication in remote deployments
 
 ## Core Research
+- [Cooperation vs Competition: Same Benefits, Different Costs](./research/cooperation-competition-benefits-costs.md) - Scientific evidence that cooperation achieves same performance as competition without stress costs
 - [Reality Check: $19T Solution](./research/reality-check-19t-solution.md) - Mathematical and political feasibility analysis
 - [Trust-First Governance Mechanics](./research/trust-first-mechanics.md) - How abundance enables trust-based systems
 - [People Are Good Governance](./research/people-are-good-governance.md) - Governance models assuming human goodness
