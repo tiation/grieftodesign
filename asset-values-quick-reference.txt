@@ -1,0 +1,27 @@
+Quick Reference - Asset Values for Step 2 (Copy-Paste into Column B):
+
+Future Fund portfolio: 250
+Commonwealth-owned businesses: 60
+Federal & state land banks: 500
+Mineral & energy royalties (30yr PV): 1000
+State power & rail networks: 400
+RBA gold + FX reserves: 130
+Public super & Future Fund adjuncts: 50
+
+Total expected: ~2,390 billion = 2.39 trillion
+
+Coverage ratio calculation:
+2,390 ÷ 11,360 = 0.21 (21%)
+
+This means with current rough estimates, we'd need:
+- Either 5x leverage (21% × 5 = 105%)
+- Or find more assets worth ~9 trillion
+- Or a combination (e.g., 3x leverage + more assets)
+
+Next steps after you paste these:
+1. Add the SUM formula in the Subtotal row
+2. Add the coverage ratio formula: =Subtotal_cell/11360
+3. See what percentage you get
+4. Tomorrow we'll refine with real citations and add leverage scenarios
+
+Remember: This is just V0 to see the shape of the challenge!
