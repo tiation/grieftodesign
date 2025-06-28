@@ -87,8 +87,16 @@ It's about making sure that no child dies from poverty, violence, or systemic ne
 
 ---
 
+## The Complete Vision
+
+**[Everything, All at Once in 5 Minutes](./everything-at-once.md)** - The full transformation plan
+
+*"No. I want everything. Everything can change in a good way. Everything, all at once in 5 minutes."*
+
 ## Join the Mission
 
+- **[Read the complete vision](./everything-at-once.md)** - Everything at once transformation
+- **[See the financial proof](./financial-proof-plan.md)** - Numbers-savvy analysis
 - **Explore the research** in our `/research` directory
 - **Review the legislation** in our `/legislation` directory  
 - **Follow the journey** through our brands:
