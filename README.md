@@ -116,6 +116,7 @@ Australia sits on $19 trillion in net national wealth. Our solution:
 - [Trust-First Governance Mechanics](./research/trust-first-mechanics.md) - How abundance enables trust-based systems
 - [People Are Good Governance](./research/people-are-good-governance.md) - Governance models assuming human goodness
 - [Pure Trust Governance](./research/pure-trust-governance.md) - Complete trust-first framework
+- [Internet Accessibility & VPN Mesh](./internet-vpn-access.md) - Universal connectivity as human right
 
 ### Legislation & Policy
 - [Companion Acts Complete](./legislation/companion-acts-complete.md) - All 12 acts for systemic transformation
