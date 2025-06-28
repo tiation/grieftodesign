@@ -1,0 +1,95 @@
+{{AfC submission|t||ts=~~~~~|u=Cooperative Capitalism|ns=118}}
+{{AfC comment|1=Please review this article submission about Cooperative Capitalism. The concept represents a systematic approach to social innovation and policy design.}}
+
+<!-- Please don't remove anything above this line. Thank you! -->
+{{Infobox economic theory
+| name = Cooperative Capitalism
+| image = 
+| caption = 
+| type = [[Economic system]]
+| field = [[Economics]], [[Political economy]]
+| year = 2025 (formalized)
+| proponents = Various [[Grief-to-Design Blueprint]] contributors
+}}
+
+'''Cooperative Capitalism''' is an economic system that preserves market mechanisms while restructuring ownership, governance, and incentive systems to prioritize cooperation, sustainability, and shared prosperity. It represents a "third way" between traditional competitive capitalism and state-controlled economies.
+
+== Core Principles ==
+
+Cooperative Capitalism is built on five foundational principles:
+
+=== Distributed Ownership ===
+Broad-based participation in capital ownership through various mechanisms including:
+* [[Employee stock ownership plan|Employee Stock Ownership Plans (ESOPs)]]
+* [[Worker cooperative|Worker cooperatives]]
+* Community ownership models
+* [[Steward ownership]] structures
+
+=== Stakeholder Governance ===
+Decision-making processes that include all affected parties:
+* Workers in operational decisions
+* Communities in environmental impacts
+* Customers in service design
+* Future generations in long-term planning
+
+=== Market Design ===
+Intentionally structured markets that:
+* Internalize environmental and social externalities
+* Reward long-term value creation
+* Prevent excessive concentration of power
+* Enable transparent price discovery
+
+=== Public-Commons-Private Balance ===
+Appropriate sector roles based on the nature of goods and services:
+* [[Public goods]] managed collectively
+* [[Common-pool resource|Common resources]] stewarded by communities
+* Private goods allocated through markets
+* Mixed ownership for complex services
+
+=== Long-term Value Creation ===
+Incentive structures that reward:
+* Sustainability over short-term extraction
+* Innovation over speculation
+* Cooperation over zero-sum competition
+* Regeneration over depletion
+
+== Real-World Examples ==
+
+=== Successful Implementations ===
+
+'''[[Mondragón Cooperative Corporation]]''' (Spain)
+* €12.2 billion revenue (2022)
+* 81,000+ worker-owners across 96 cooperatives
+* Maintained employment through 2008 crisis
+* Maximum 9:1 pay ratio vs. 350:1 in conventional corporations
+
+'''Employee Stock Ownership Plans''' (United States)
+* 6,500+ companies with ESOPs
+* 14 million employee-owners
+* 10% higher productivity than conventional firms
+* Examples: New Belgium Brewing, King Arthur Flour
+
+'''[[Benefit corporation]]s'''
+* Legal structure requiring stakeholder consideration
+* 5,000+ companies across 35 U.S. states
+* Examples: [[Patagonia]], [[Danone]], [[Kickstarter]]
+
+== See Also ==
+* [[Worker cooperative]]
+* [[Social economy]]
+* [[Stakeholder capitalism]]
+* [[B Corporation]]
+* [[Social enterprise]]
+* [[Solidarity economy]]
+
+== References ==
+{{Reflist}}
+
+== External Links ==
+* [https://github.com/tiation/grieftodesign Cooperative Capitalism Full Documentation]
+
+[[Category:Economic systems]]
+[[Category:Cooperatives]]
+[[Category:Alternative economics]]
+[[Category:Social enterprise]]
+[[Category:Stakeholder capitalism]]

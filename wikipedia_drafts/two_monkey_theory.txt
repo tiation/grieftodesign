@@ -1,0 +1,83 @@
+{{AfC submission|t||ts=~~~~~|u=Two Monkey Theory|ns=118}}
+{{AfC comment|1=Please review this article submission about Two Monkey Theory. The concept represents a systematic approach to social innovation and policy design.}}
+
+<!-- Please don't remove anything above this line. Thank you! -->
+{{Infobox theory
+| name = Two Monkey Theory
+| image = 
+| caption = 
+| type = [[Social theory]]
+| field = [[Social psychology]], [[Political science]], [[Evolutionary psychology]]
+| year = 2025
+| proponents = [[Grief-to-Design Blueprint]] framework
+}}
+
+The '''Two Monkey Theory''' is a social and political theory that examines why numerically superior groups often accept domination by smaller elites, despite having the collective power to change systems. The theory draws its name from the famous [[capuchin monkey]] fairness experiments by Frans de Waal and Sarah Brosnan.
+
+== Origin and Foundation ==
+
+The theory emerged from analysis of the [[Capuchin monkey#Social behavior|capuchin fairness experiment]], where monkeys rejected unequal rewards for equal work, even at personal cost. The Two Monkey Theory extends this finding to analyze human social and economic systems.
+
+=== The Capuchin Experiment ===
+In the foundational experiment:
+* Two capuchin monkeys performed identical tasks
+* One received a low-value reward (cucumber)
+* The other received a high-value reward (grape)
+* The cucumber-receiving monkey refused to participate and threw the reward back
+
+This demonstrated that primates have an innate sense of fairness and will reject unfair arrangements even when it means losing benefits.
+
+== Core Paradox ==
+
+The central question addressed by the theory is: '''If the many outnumber the few, why do unequal arrangements persist?'''
+
+The theory identifies several mechanisms that maintain inequality despite numerical disadvantages for elites:
+
+=== Information Asymmetry ===
+* Deliberate complexity hiding wealth concentration
+* Limited access to key economic information
+* Narrative control through media concentration
+* Social and geographic segregation limiting awareness
+
+=== Coordination Problems ===
+* [[Free rider problem|Free-rider problems]] in collective action
+* First-mover disadvantages for early activists
+* Communication constraints preventing organization
+* Trust deficits about others' participation
+
+=== Psychological Mechanisms ===
+* '''[[System justification]]''': Tendency to defend existing systems
+* '''[[Just-world hypothesis]]''': Belief that outcomes are deserved
+* '''[[False consciousness]]''': Adoption of elite narratives against self-interest
+* '''[[Learned helplessness]]''': Belief that change is impossible
+* '''[[Preference falsification]]''': Public compliance despite private disagreement
+
+== Historical Applications ==
+
+The theory analyzes historical movements where the many recognized their collective power:
+
+* [[American Revolution]]: Colonists vs. British administration
+* [[Labour movement]]: Workers vs. industrial owners
+* [[Civil Rights Movement]]: Oppressed communities vs. discriminatory systems
+* [[Indian independence movement]]: 300 million Indians vs. British colonial rule
+* [[Women's suffrage]]: Women as majority without political voice
+
+== See Also ==
+* [[Collective action]]
+* [[Social movement theory]]
+* [[Elite theory]]
+* [[System justification]]
+* [[Political psychology]]
+* [[Evolutionary psychology]]
+
+== References ==
+{{Reflist}}
+
+== External Links ==
+* [https://github.com/tiation/grieftodesign Two Monkey Theory Full Analysis]
+
+[[Category:Social theories]]
+[[Category:Political psychology]]
+[[Category:Collective action]]
+[[Category:Social movements]]
+[[Category:Evolutionary psychology]]
