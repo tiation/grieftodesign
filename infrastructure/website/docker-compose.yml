@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: grieftodesign-nginx
+    ports:
+      - "8080:80"      # HTTP (redirects to HTTPS)
+      - "8443:443"     # HTTPS
+    volumes:
+      - ./html:/var/www/html
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/sites:/etc/nginx/conf.d
+      - ./ssl:/etc/nginx/ssl
+      - ./logs:/var/log/nginx
+    depends_on:
+      - php
+    networks:
+      - grieftodesign
+
+  php:
+    image: php:8.1-fpm-alpine
+    container_name: grieftodesign-php
+    volumes:
+      - ./html:/var/www/html
+      - ./php/php.ini:/usr/local/etc/php/php.ini
+    environment:
+      - PHP_FPM_LISTEN=9001
+    depends_on:
+      - mysql
+    networks:
+      - grieftodesign
+    # Install PHP extensions
+    command: >
+      sh -c "
+        apk add --no-cache mysql-client &&
+        docker-php-ext-install pdo pdo_mysql mysqli &&
+        php-fpm
+      "
+
+  mysql:
+    image: mysql:8.0
+    container_name: grieftodesign-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_2024!
+      MYSQL_DATABASE: grieftodesign
+      MYSQL_USER: griefweb
+      MYSQL_PASSWORD: secure_password_2024!
+    ports:
+      - "3307:3306"    # Custom MySQL port
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/init:/docker-entrypoint-initdb.d
+    networks:
+      - grieftodesign
+    command: --port=3306
+
+  certbot:
+    image: certbot/certbot
+    container_name: grieftodesign-certbot
+    volumes:
+      - ./ssl:/etc/letsencrypt
+      - ./html:/var/www/html
+    # For production SSL certificates
+    # command: certonly --webroot --webroot-path=/var/www/html --email your@email.com --agree-tos --no-eff-email -d your-domain.com
+
+networks:
+  grieftodesign:
+    driver: bridge
+
+volumes:
+  mysql_data:
+    driver: local
