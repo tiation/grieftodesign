@@ -1,0 +1,19 @@
+
+# Local Events for ${REGION} - Week of ${DATE_RANGE}
+
+## Team Gatherings
+${LOCAL_TEAM_EVENTS}
+
+## Training Opportunities
+${LOCAL_TRAINING_EVENTS}
+
+## Community Outreach
+${COMMUNITY_EVENTS}
+
+## Visiting Technical Experts
+${EXPERT_VISITS}
+
+-----------------------
+Have an event to share? Type "pulse-submit event" on your terminal.
+All events are also cached locally for offline viewing.
+

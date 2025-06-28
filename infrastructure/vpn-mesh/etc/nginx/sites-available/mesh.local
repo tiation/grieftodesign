@@ -1,0 +1,33 @@
+server {
+    listen 80;
+    server_name admin.mesh;
+
+    root /var/www/html;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location /pulse/ {
+        proxy_pass http://127.0.0.1:5000/;
+    }
+
+    location /theia/ {
+        proxy_pass http://127.0.0.1:3000/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+    }
+
+    location /git/ {
+        proxy_pass http://127.0.0.1:3001/;
+    }
+
+    location /files/ {
+        alias /srv/files/;
+        autoindex on;
+    }
+}
+

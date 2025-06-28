@@ -1,0 +1,14 @@
+/home/lappy/work/015_VPN_Mesh/mesh-dashboard/static
+├── css
+│   ├── main.css
+│   ├── structure.json
+│   └── structure.txt
+├── index.html
+├── js
+│   ├── dashboard.js
+│   ├── structure.json
+│   └── structure.txt
+├── structure.json
+└── structure.txt
+
+3 directories, 9 files

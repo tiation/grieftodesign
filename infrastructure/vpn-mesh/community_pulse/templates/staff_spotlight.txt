@@ -1,0 +1,26 @@
+
+# Monthly Staff Spotlight - ${MONTH_YEAR}
+
+## Featuring: ${STAFF_NAME} from ${STAFF_REGION}
+
+${STAFF_ROLE} since ${JOIN_DATE}
+
+### Background
+${STAFF_BACKGROUND}
+
+### Notable Achievement
+${STAFF_ACHIEVEMENT}
+
+### Fun Fact
+${STAFF_FUN_FACT}
+
+### Message to the Team
+"${STAFF_MESSAGE}"
+
+### Favorite Tech Tip
+${STAFF_TECH_TIP}
+
+-----------------------
+Know someone doing amazing work? Nominate them for next month's spotlight!
+Type "pulse-nominate [colleague-name]" on your terminal.
+

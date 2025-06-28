@@ -1,0 +1,7 @@
+/home/lappy/work/015_VPN_Mesh/Server_Plan
+├── Local_First.md
+├── READMEmesh.local.md
+├── structure.json
+└── structure.txt
+
+1 directory, 4 files

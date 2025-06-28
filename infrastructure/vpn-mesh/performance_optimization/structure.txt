@@ -1,0 +1,8 @@
+/home/lappy/work/015_VPN_Mesh/performance_optimization
+├── bandwidth-profiles.conf
+├── .gitkeep
+├── SetUpToolsMonitoringNetworkHelp.md
+├── structure.json
+└── structure.txt
+
+1 directory, 5 files

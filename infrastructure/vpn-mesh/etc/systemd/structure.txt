@@ -1,0 +1,8 @@
+/home/lappy/work/015_VPN_Mesh/etc/systemd
+├── structure.json
+├── structure.txt
+└── system
+    ├── structure.json
+    └── structure.txt
+
+2 directories, 4 files

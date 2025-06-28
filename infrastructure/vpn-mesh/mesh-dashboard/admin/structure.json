@@ -1,0 +1,11 @@
+[
+  "structure.json",
+  "structure.txt",
+  "config.py",
+  "server.py",
+  "templates/structure.json",
+  "templates/dashboard.html",
+  "templates/nodes.html",
+  "templates/structure.txt",
+  "templates/users.html"
+]

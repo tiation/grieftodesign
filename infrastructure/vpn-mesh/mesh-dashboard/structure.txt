@@ -1,0 +1,55 @@
+/home/lappy/work/015_VPN_Mesh/mesh-dashboard
+├── admin
+│   ├── config.py
+│   ├── server.py
+│   ├── structure.json
+│   ├── structure.txt
+│   └── templates
+│       ├── dashboard.html
+│       ├── nodes.html
+│       ├── structure.json
+│       ├── structure.txt
+│       └── users.html
+├── app
+│   ├── app.py
+│   ├── structure.json
+│   └── structure.txt
+├── docs
+│   ├── ADMIN_GUIDE.md
+│   ├── CLIENT_SETUP.md
+│   ├── structure.json
+│   ├── structure.txt
+│   └── VOLUNTEER_GUIDE.md
+├── examples
+│   ├── crontab.example
+│   ├── node-status.json
+│   ├── structure.json
+│   └── structure.txt
+├── README.md
+├── requirements.txt
+├── scripts
+│   ├── add-client.sh
+│   ├── add-volunteer.sh
+│   ├── setup-admin.sh
+│   ├── structure.json
+│   └── structure.txt
+├── security
+│   ├── dashboard.html
+│   ├── structure.json
+│   └── structure.txt
+├── static
+│   ├── css
+│   │   ├── main.css
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── index.html
+│   ├── js
+│   │   ├── dashboard.js
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── structure.json
+│   └── structure.txt
+├── structure.json
+└── structure.txt
+
+11 directories, 42 files

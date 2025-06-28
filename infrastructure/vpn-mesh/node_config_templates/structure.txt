@@ -1,0 +1,7 @@
+/home/lappy/work/015_VPN_Mesh/node_config_templates
+├── .gitkeep
+├── mesh-node.conf
+├── structure.json
+└── structure.txt
+
+1 directory, 4 files

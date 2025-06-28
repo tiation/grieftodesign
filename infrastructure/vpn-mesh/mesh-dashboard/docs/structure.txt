@@ -1,0 +1,8 @@
+/home/lappy/work/015_VPN_Mesh/mesh-dashboard/docs
+├── ADMIN_GUIDE.md
+├── CLIENT_SETUP.md
+├── structure.json
+├── structure.txt
+└── VOLUNTEER_GUIDE.md
+
+1 directory, 5 files

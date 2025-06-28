@@ -1,0 +1,179 @@
+#!/bin/bash
+
+# mesh-access-control - Manage mesh network access control
+# Part of ChaseWhiteRabbit Mesh Network Infrastructure
+
+set -e
+
+SCRIPT_NAME=$(basename "$0")
+CONFIG_DIR="/etc/mesh-network"
+ACCESS_DIR="$CONFIG_DIR/access"
+AUTHORIZED_NODES="$ACCESS_DIR/authorized_nodes.conf"
+ROLES_FILE="$ACCESS_DIR/roles.conf"
+ACCESS_LOG="$ACCESS_DIR/access.log"
+
+# Colors for output
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+# Print colored status
+print_status() {
+    local status=$1
+    local message=$2
+    case $status in
+        "OK")
+            echo -e "${GREEN}[OK]${NC} $message"
+            ;;
+        "ERROR")
+            echo -e "${RED}[ERROR]${NC} $message"
+            ;;
+        "WARNING")
+            echo -e "${YELLOW}[WARNING]${NC} $message"
+            ;;
+    esac
+}
+
+# Initialize access control system
+init() {
+    mkdir -p "$ACCESS_DIR"
+    chmod 700 "$ACCESS_DIR"
+    
+    # Create base configuration files
+    if [ ! -f "$AUTHORIZED_NODES" ]; then
+        cat > "$AUTHORIZED_NODES" << EOF
+# Authorized Nodes Configuration
+# Format: node_id:role:public_key:description
+
+# Example entries:
+# gateway-01:admin:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI...:Primary Gateway Node
+EOF
+        chmod 600 "$AUTHORIZED_NODES"
+    fi
+    
+    if [ ! -f "$ROLES_FILE" ]; then
+        cat > "$ROLES_FILE" << EOF
+# Role Definitions
+# Format: role:permissions
+
+admin:full_access,manage_nodes,manage_keys
+operator:monitor,configure,restart
+viewer:monitor
+EOF
+        chmod 600 "$ROLES_FILE"
+    fi
+    
+    touch "$ACCESS_LOG"
+    chmod 600 "$ACCESS_LOG"
+    
+    print_status "OK" "Access control system initialized"
+}
+
+# Add or update a node
+manage_node() {
+    local action=$1
+    local node_id=$2
+    local role=$3
+    local public_key=$4
+    local description=$5
+    
+    case $action in
+        add)
+            if grep -q "^${node_id}:" "$AUTHORIZED_NODES"; then
+                print_status "ERROR" "Node $node_id already exists"
+                return 1
+            fi
+            echo "${node_id}:${role}:${public_key}:${description}" >> "$AUTHORIZED_NODES"
+            print_status "OK" "Added node: $node_id"
+            ;;
+        update)
+            sed -i "/^${node_id}:/c\\${node_id}:${role}:${public_key}:${description}" "$AUTHORIZED_NODES"
+            print_status "OK" "Updated node: $node_id"
+            ;;
+        remove)
+            sed -i "/^${node_id}:/d" "$AUTHORIZED_NODES"
+            print_status "OK" "Removed node: $node_id"
+            ;;
+    esac
+}
+
+# List all nodes
+list_nodes() {
+    echo "Authorized Nodes:"
+    echo "----------------"
+    while IFS=: read -r node_id role key description; do
+        if [[ $node_id =~ ^#.*$ ]] || [ -z "$node_id" ]; then
+            continue
+        fi
+        echo "Node: $node_id"
+        echo "  Role: $role"
+        echo "  Description: $description"
+        echo
+    done < "$AUTHORIZED_NODES"
+}
+
+# Check node authorization
+check_auth() {
+    local node_id=$1
+    local action=$2
+    
+    if ! grep -q "^${node_id}:" "$AUTHORIZED_NODES"; then
+        print_status "ERROR" "Unauthorized node: $node_id"
+        return 1
+    fi
+    
+    local role=$(grep "^${node_id}:" "$AUTHORIZED_NODES" | cut -d: -f2)
+    local permissions=$(grep "^${role}:" "$ROLES_FILE" | cut -d: -f2)
+    
+    if [[ $permissions == *"$action"* ]] || [[ $permissions == *"full_access"* ]]; then
+        print_status "OK" "Access granted: $node_id ($action)"
+        return 0
+    else
+        print_status "ERROR" "Permission denied: $node_id ($action)"
+        return 1
+    fi
+}
+
+# Main execution
+main() {
+    case $1 in
+        init)
+            init
+            ;;
+        add|update|remove)
+            local action=$1
+            shift
+            if [ $# -lt 2 ]; then
+                echo "Usage: $SCRIPT_NAME $action <node_id> <role> [public_key] [description]"
+                exit 1
+            fi
+            manage_node "$action" "$@"
+            ;;
+        list)
+            list_nodes
+            ;;
+        check)
+            shift
+            if [ $# -lt 2 ]; then
+                echo "Usage: $SCRIPT_NAME check <node_id> <action>"
+                exit 1
+            fi
+            check_auth "$@"
+            ;;
+        *)
+            echo "Usage: $SCRIPT_NAME <command> [options]"
+            echo
+            echo "Commands:"
+            echo "  init                Initialize access control system"
+            echo "  add <id> <role> <key> <desc>    Add a new node"
+            echo "  update <id> <role> <key> <desc> Update existing node"
+            echo "  remove <id>         Remove a node"
+            echo "  list                List all nodes"
+            echo "  check <id> <action> Check node authorization"
+            exit 1
+            ;;
+    esac
+}
+
+main "$@"

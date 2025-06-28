@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesh Network Security Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .status-ok { color: #27ae60; }
+        .status-warning { color: #f39c12; }
+        .status-error { color: #c0392b; }
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .chart-container {
+            height: 200px;
+            margin-top: 10px;
+        }
+        .alert-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .alert {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+        .alert-critical {
+            background: #ffebee;
+            border-left: 4px solid #c0392b;
+        }
+        .alert-warning {
+            background: #fff3e0;
+            border-left: 4px solid #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Mesh Network Security Dashboard</h1>
+            <p>Real-time security monitoring and metrics</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Authentication Status</h2>
+                <div class="metric-value" id="auth-status">Loading...</div>
+                <div class="chart-container" id="auth-chart"></div>
+            </div>
+
+            <div class="card">
+                <h2>Network Security</h2>
+                <div class="metric-value" id="network-status">Loading...</div>
+                <div class="chart-container" id="network-chart"></div>
+            </div>
+
+            <div class="card">
+                <h2>Resource Usage</h2>
+                <div class="metric-value" id="resource-status">Loading...</div>
+                <div class="chart-container" id="resource-chart"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Security Alerts</h2>
+            <div class="alert-list" id="alerts">
+                <!-- Alerts will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Active Nodes</h2>
+                <div id="active-nodes">Loading...</div>
+            </div>
+
+            <div class="card">
+                <h2>Security Events</h2>
+                <div id="security-events">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dashboard functionality
+        class SecurityDashboard {
+            constructor() {
+                this.updateInterval = 30000; // 30 seconds
+                this.initialize();
+            }
+
+            initialize() {
+                this.updateMetrics();
+                setInterval(() => this.updateMetrics(), this.updateInterval);
+            }
+
+            async updateMetrics() {
+                try {
+                    const response = await fetch('/api/security/metrics');
+                    const data = await response.json();
+                    this.updateDisplay(data);
+                } catch (error) {
+                    console.error('Failed to fetch metrics:', error);
+                }
+            }
+
+            updateDisplay(data) {
+                // Update authentication status
+                document.getElementById('auth-status').innerHTML = `
+                    Success Rate: ${data.auth.successRate}%<br>
+                    Failed Attempts: ${data.auth.failedAttempts}
+                `;
+
+                // Update network status
+                document.getElementById('network-status').innerHTML = `
+                    Active Connections: ${data.network.connections}<br>
+                    Bandwidth Usage: ${data.network.bandwidth}%
+                `;
+
+                // Update resource status
+                document.getElementById('resource-status').innerHTML = `
+                    CPU: ${data.resources.cpu}%<br>
+                    Memory: ${data.resources.memory}%<br>
+                    Disk: ${data.resources.disk}%
+                `;
+
+                // Update alerts
+                const alertsContainer = document.getElementById('alerts');
+                alertsContainer.innerHTML = data.alerts.map(alert => `
+                    <div class="alert alert-${alert.level}">
+                        <strong>${alert.timestamp}</strong>: ${alert.message}
+                    </div>
+                `).join('');
+
+                // Update active nodes
+                document.getElementById('active-nodes').innerHTML = `
+                    <p>Total Nodes: ${data.nodes.total}</p>
+                    <p>Active: ${data.nodes.active}</p>
+                    <p>Inactive: ${data.nodes.inactive}</p>
+                `;
+
+                // Update security events
+                document.getElementById('security-events').innerHTML = `
+                    <p>Last 24 Hours: ${data.events.last24h}</p>
+                    <p>Critical Events: ${data.events.critical}</p>
+                    <p>Warnings: ${data.events.warnings}</p>
+                `;
+            }
+        }
+
+        // Initialize dashboard when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new SecurityDashboard();
+        });
+    </script>
+</body>
+</html>

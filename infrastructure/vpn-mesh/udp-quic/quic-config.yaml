@@ -1,0 +1,46 @@
+
+# ChaseWhiteRabbit Mesh Network QUIC Configuration
+# Optimized for unreliable Indonesian network connectivity
+# Last updated: 2025-04-15
+
+# =====================================================================
+# GENERAL CONFIGURATION
+# =====================================================================
+general:
+  # Enable QUIC protocol for all mesh traffic
+  enabled: true
+  
+  # Log level: debug, info, warn, error
+  log_level: info
+  
+  # Interface config
+  listen_address: "::"  # Listen on all interfaces
+  port: 8472  # Default QUIC port
+  
+  # Node identification
+  node_id: ${MESH_NODE_ID}  # Will be substituted from environment variable
+  region: ${MESH_REGION}    # Will be substituted from environment variable
+
+# =====================================================================
+# CONNECTION MANAGEMENT
+# =====================================================================
+connection:
+  # Connection establishment and maintenance
+  handshake_timeout_ms: 5000
+  idle_timeout_ms: 60000
+  max_connections: 1000
+  max_streams_per_connection: 100
+  max_stream_data: 1048576  # 1MB per stream
+  max_data: 104857600      # 100MB per connection
+  
+  # Connection migration (for IP address changes)
+  enable_connection_migration: true
+  
+  # Address validation to prevent amplification attacks
+  address_validation: true
+  
+  # Path MTU Discovery
+  enable_path_mtu_discovery: true
+  min_packet_size: 1200
+  max_packet_size: 1
+

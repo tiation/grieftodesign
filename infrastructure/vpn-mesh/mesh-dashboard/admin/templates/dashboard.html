@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesh Network Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Mesh Network Admin Dashboard</h1>
+        <div class="user-info">
+            <span id="username">Admin</span>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="/" class="active">Dashboard</a>
+        <a href="/nodes">Nodes</a>
+        <a href="/users">Users</a>
+        <a href="/settings">Settings</a>
+    </nav>
+    
+    <div class="container">
+        <div class="dashboard-summary">
+            <div class="summary-card">
+                <div class="card-value" id="total-nodes">--</div>
+                <div class="card-label">Total Nodes</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-value" id="active-nodes">--</div>
+                <div class="card-label">Active Nodes</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-value" id="warning-nodes">--</div>
+                <div class="card-label">Warnings</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-value" id="offline-nodes">--</div>
+                <div class="card-label">Offline</div>
+            </div>
+        </div>
+        
+        <div class="dashboard-grid">
+            <div class="card">
+                <h2>Node Status Overview</h2>
+                <div class="node-status-chart">
+                    <canvas id="node-status-chart"></canvas>
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="status-indicator status-ok"></span> Online
+                    </div>
+                    <div class="legend-item">
+                        <span class="status-indicator status-warning"></span> Warning
+                    </div>
+                    <div class="legend-item">
+                        <span class="status-indicator status-error"></span> Offline
+                    </div>
+                    <div class="legend-item">
+                        <span class="status-indicator status-unknown"></span> Unknown
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Node Types</h2>
+                <div class="node-types-chart">
+                    <canvas id="node-types-chart"></canvas>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Recent Activity</h2>
+                <ul class="activity-list" id="activity-feed">
+                    <li class="activity-item">
+                        <span class="timestamp">Loading...</span>
+                        <span class="activity-message">Loading recent activity...</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>Latest Nodes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Node ID</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Last Seen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="latest-nodes">
+                        <tr>
+                            <td colspan="4">Loading node data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="view-all">
+                    <a href="/nodes">View All Nodes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mesh Network Project. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
+

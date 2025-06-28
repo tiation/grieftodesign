@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Mesh Network Admin</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>User Management</h1>
+        <div class="user-info">
+            <span id="username">Admin</span>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/nodes">Nodes</a>
+        <a href="/users" class="active">Users</a>
+        <a href="/settings">Settings</a>
+    </nav>
+    
+    <div class="container">
+        <div class="page-actions">
+            <div class="search-box">
+                <input type="text" id="user-search" placeholder="Search users...">
+            </div>
+            <div class="filter-options">
+                <select id="user-role-filter">
+                    <option value="all">All Roles</option>
+                    <option value="admin">Admin</option>
+                    <option value="operator">Operator</option>
+                    <option value="viewer">Viewer</option>
+                </select>
+            </div>
+            <button class="primary-btn" id="add-user-btn">Add User</button>
+        </div>
+        
+        <div class="card">
+            <h2>User List</h2>
+            <table class="data-table" id="users-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>Created</th>
+                        <th>Last Login</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr data-username="{{ user.username }}">
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.role }}</td>
+                        <td>{{ user.created_at }}</td>
+                        <td>{{ user.last_login or 'Never' }}</td>
+                        <td class="actions">
+                            <button class="action-btn edit-btn" title="Edit User" data-username="{{ user.username }}">
+                                <i class="icon-edit"></i>
+                            </button>
+                            <button class="action-btn delete-btn" title="Delete User" data-username="{{ user.username }}">
+                                <i class="icon-delete"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Add/Edit User Modal -->
+    <div class="modal" id="edit-user-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="user-modal-title">Add New User</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="user-form">
+                    <input type="hidden" id="user-action" value="add">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username-input" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password-input" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password-input" name="confirm-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role:</label>
+                        <select id="role-input" name="role" required>
+                            <option value="admin">Admin</option>
+                            <option value="operator">Operator</option>
+                            <option value="viewer">Viewer</option>
+                        </select>
+                    </div>
+                    <div class="form-description">
+                        <strong>Role Permissions:</strong>
+                        <ul>
+                            <li><strong>Admin:</strong> Full access to all features</li>
+                            <li><strong>Operator:</strong> Can manage nodes but not users</li>
+                            <li><strong>Viewer:</strong> Read-only access to the dashboard</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="secondary-btn cancel-btn">Cancel</button>
+                <button class="primary-btn" id="save-user-btn">Save User</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirm-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirm Action</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="confirm-message">Are you sure you want to delete this user?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="secondary-btn cancel-btn">Cancel</button>
+                <button class="danger-btn" id="confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/dashboard.js"></script>
+    <script>
+        // User management specific interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            initUserManagement();
+        });
+    </script>
+</body>
+</html>
+

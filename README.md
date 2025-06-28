@@ -111,7 +111,23 @@ Australia sits on $19 trillion in net national wealth. Our solution:
 
 ## Documentation Structure
 
-### Core Research
+## VPN Mesh Network
+
+The project now includes a fully integrated VPN Mesh infrastructure, aimed at promoting universal internet access and equity.
+
+- **Location:** [VPN Mesh Directory](./infrastructure/vpn-mesh/README.md)
+- **Purpose:** Resilient connectivity for disadvantaged communities using fault-resistant mesh design
+
+### Community Pulse System
+
+Within the VPN Mesh, we've integrated a **Community Pulse** system - a lightweight communication tool designed to keep teams connected and motivated, even in areas with limited connectivity.
+
+- **Quick Start:** Navigate to `infrastructure/vpn-mesh/community_pulse/` and run `./pulse.sh`
+- **Features:** Fun facts, team achievements, mood sharing, local events
+- **Guide:** [Community Pulse README](./infrastructure/vpn-mesh/community_pulse/README.md)
+- **Purpose:** Build team morale and maintain communication in remote deployments
+
+## Core Research
 - [Reality Check: $19T Solution](./research/reality-check-19t-solution.md) - Mathematical and political feasibility analysis
 - [Trust-First Governance Mechanics](./research/trust-first-mechanics.md) - How abundance enables trust-based systems
 - [People Are Good Governance](./research/people-are-good-governance.md) - Governance models assuming human goodness

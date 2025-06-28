@@ -1,0 +1,13 @@
+[
+  "structure.json",
+  "structure.txt",
+  "nginx/structure.json",
+  "nginx/structure.txt",
+  "systemd/structure.json",
+  "systemd/structure.txt",
+  "systemd/system/structure.json",
+  "systemd/system/structure.txt",
+  "nginx/sites-available/mesh.local",
+  "nginx/sites-available/structure.json",
+  "nginx/sites-available/structure.txt"
+]

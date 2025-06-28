@@ -1,0 +1,6 @@
+/home/lappy/work/015_VPN_Mesh/Plans
+├── network_completion_plan.md
+├── structure.json
+└── structure.txt
+
+1 directory, 3 files

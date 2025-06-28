@@ -1,0 +1,8 @@
+/home/lappy/work/015_VPN_Mesh/scripts/security
+├── mesh-access-control
+├── mesh-intrusion-detect
+├── mesh-security-metrics
+├── structure.json
+└── structure.txt
+
+1 directory, 5 files

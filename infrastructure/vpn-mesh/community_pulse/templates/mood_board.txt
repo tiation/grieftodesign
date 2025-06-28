@@ -1,0 +1,21 @@
+
+# Daily Team Pulse - ${DATE}
+
+## How is our team feeling today?
+
+${MOOD_CHART}
+
+Team energy: ${TEAM_ENERGY_LEVEL}%
+Most common mood: "${MOST_COMMON_MOOD}"
+Needs assistance: ${HELP_NEEDED_COUNT} team members
+
+## Today's Team Tip
+${DAILY_TIP}
+
+-----------------------
+Share your mood anonymously to help team leads provide better support!
+Type "pulse-mood [mood-number]" on your terminal.
+
+1: Energized! 🌟  2: Focused 🎯  3: Determined 💪
+4: Learning 📚    5: Challenged 🧩  6: Tired 😴  7: Need help 🆘
+

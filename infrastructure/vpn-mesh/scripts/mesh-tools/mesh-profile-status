@@ -1,0 +1,158 @@
+#!/bin/bash
+
+# mesh-profile-status - Show current mesh network profile status and settings
+# Part of ChaseWhiteRabbit Mesh Network Infrastructure
+
+set -e
+
+SCRIPT_NAME=$(basename "$0")
+PROFILE_DIR="/opt/mesh-network/profiles"
+CURRENT_PROFILE_LINK="/etc/mesh-network/current_profile"
+
+# Colors for output
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
+# Print status with color
+print_status() {
+    local color=$1
+    local message=$2
+    echo -e "${color}${message}${NC}"
+}
+
+# List all available profiles
+list_profiles() {
+    echo "Available profiles:"
+    echo "-----------------"
+    for profile in "$PROFILE_DIR"/*.conf; do
+        if [[ -f "$profile" ]]; then
+            local profile_name=$(basename "$profile" .conf)
+            local description=$(grep "^# Suitable for:" "$profile" | cut -d: -f2- || echo "No description available")
+            echo -e "${BLUE}${profile_name}${NC}:${description}"
+        fi
+    done
+}
+
+# Get current profile details
+get_current_profile() {
+    if [[ -L "$CURRENT_PROFILE_LINK" ]]; then
+        local current=$(readlink "$CURRENT_PROFILE_LINK")
+        echo "$(basename "$current" .conf)"
+    else
+        echo "unknown"
+    fi
+}
+
+# Show profile configuration
+show_profile_config() {
+    local profile=$1
+    local profile_file="$PROFILE_DIR/${profile}.conf"
+    
+    if [[ ! -f "$profile_file" ]]; then
+        print_status "$RED" "Error: Profile '$profile' not found"
+        return 1
+    fi
+    
+    echo "Profile Configuration:"
+    echo "--------------------"
+    
+    # Extract and display bandwidth settings
+    if grep -q "^bandwidth:" "$profile_file"; then
+        print_status "$BLUE" "Bandwidth Settings:"
+        grep -A 3 "^bandwidth:" "$profile_file" | tail -n +2 | sed 's/^/  /'
+    fi
+    
+    # Extract and display QoS settings
+    if grep -q "^qos:" "$profile_file"; then
+        print_status "$BLUE" "QoS Settings:"
+        grep -A 5 "^qos:" "$profile_file" | tail -n +2 | sed 's/^/  /'
+    fi
+    
+    # Extract and display routing settings
+    if grep -q "^routing:" "$profile_file"; then
+        print_status "$BLUE" "Routing Settings:"
+        grep -A 3 "^routing:" "$profile_file" | tail -n +2 | sed 's/^/  /'
+    fi
+}
+
+# Show current network status
+show_network_status() {
+    echo "Network Status:"
+    echo "--------------"
+    
+    # Check interface status
+    local interface=$(grep "^interface:" /etc/mesh-network/node.conf | cut -d: -f2 | tr -d ' ' || echo "unknown")
+    if [[ "$interface" != "unknown" ]]; then
+        if ip link show "$interface" &>/dev/null; then
+            local state=$(ip link show "$interface" | grep -oP "state \K\w+")
+            if [[ "$state" == "UP" ]]; then
+                print_status "$GREEN" "Interface $interface is UP"
+            else
+                print_status "$RED" "Interface $interface is $state"
+            fi
+        else
+            print_status "$RED" "Interface $interface not found"
+        fi
+    fi
+    
+    # Check bandwidth usage
+    if command -v vnstat &>/dev/null; then
+        echo
+        print_status "$BLUE" "Current Bandwidth Usage:"
+        vnstat -h 1 | tail -n 3
+    fi
+}
+
+# Main execution
+main() {
+    local show_all=0
+    local profile=""
+    
+    # Parse command line arguments
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -a|--all)
+                show_all=1
+                shift
+                ;;
+            -p|--profile)
+                profile="$2"
+                shift 2
+                ;;
+            -h|--help)
+                echo "Usage: $SCRIPT_NAME [-a|--all] [-p|--profile name]"
+                echo "Show mesh network profile status and settings"
+                exit 0
+                ;;
+            *)
+                echo "Unknown option: $1"
+                exit 1
+                ;;
+        esac
+    done
+    
+    # Show current profile status
+    local current_profile=$(get_current_profile)
+    echo "Current Profile: $current_profile"
+    echo
+    
+    # Show specific profile details if requested
+    if [[ -n "$profile" ]]; then
+        show_profile_config "$profile"
+        echo
+    fi
+    
+    # Show network status
+    show_network_status
+    echo
+    
+    # Show all available profiles if requested
+    if [[ "$show_all" -eq 1 ]]; then
+        list_profiles
+    fi
+}
+
+main "$@"

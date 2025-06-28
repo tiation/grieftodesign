@@ -1,0 +1,9 @@
+/home/lappy/work/015_VPN_Mesh/IPDB
+├── install-ipdb.sh
+├── node-status.sh
+├── register-node.sh
+├── show-topology.sh
+├── structure.json
+└── structure.txt
+
+1 directory, 6 files

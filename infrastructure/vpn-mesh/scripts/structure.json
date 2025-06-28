@@ -1,0 +1,14 @@
+[
+  "structure.json",
+  "structure.txt",
+  "security/mesh-security-metrics",
+  "security/structure.json",
+  "security/mesh-intrusion-detect",
+  "security/mesh-access-control",
+  "security/structure.txt",
+  "mesh-tools/structure.json",
+  "mesh-tools/mesh-node-status",
+  "mesh-tools/mesh-profile-status",
+  "mesh-tools/structure.txt",
+  "mesh-tools/mesh-service-check"
+]

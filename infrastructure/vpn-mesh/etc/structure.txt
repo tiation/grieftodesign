@@ -1,0 +1,18 @@
+/home/lappy/work/015_VPN_Mesh/etc
+├── nginx
+│   ├── sites-available
+│   │   ├── mesh.local
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── structure.json
+│   └── structure.txt
+├── structure.json
+├── structure.txt
+└── systemd
+    ├── structure.json
+    ├── structure.txt
+    └── system
+        ├── structure.json
+        └── structure.txt
+
+5 directories, 11 files

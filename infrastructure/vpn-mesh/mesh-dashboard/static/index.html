@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesh Node Status</title>
+</head>
+<body>
+<h2>Mesh Network Status</h2>
+<table border="1" id="mesh-status"></table>
+<script>
+async function updateTable() {
+    const response = await fetch('/mesh-status');
+    const nodes = await response.json();
+    let html = '<tr><th>Node</th><th>Status</th><th>Bandwidth</th><th>Uptime</th><th>Battery</th></tr>';
+    nodes.forEach(node => {
+        html += `<tr><td>${node.node_id}</td><td>${node.status}</td><td>${node.bandwidth}</td><td>${node.uptime}</td><td>${node.battery}</td></tr>`;
+    });
+    document.getElementById('mesh-status').innerHTML = html;
+}
+setInterval(updateTable, 5000);
+updateTable();
+</script>
+</body>
+</html>
+

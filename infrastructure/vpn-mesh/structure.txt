@@ -1,0 +1,187 @@
+/home/lappy/work/015_VPN_Mesh
+├── community_pulse
+│   ├── config.sh
+│   ├── data
+│   │   ├── fun_facts
+│   │   │   ├── indonesia_facts.txt
+│   │   │   ├── mesh_network_achievements.txt
+│   │   │   ├── structure.json
+│   │   │   ├── structure.txt
+│   │   │   └── tech_trivia.txt
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── fun_facts.sh
+│   ├── install.sh
+│   ├── mood.sh
+│   ├── pulse-cli.sh
+│   ├── pulse-config.yaml
+│   ├── pulse.sh
+│   ├── structure.json
+│   ├── structure.txt
+│   ├── templates
+│   │   ├── achievements.txt
+│   │   ├── fun_fact.txt
+│   │   ├── local_events.txt
+│   │   ├── mood_board.txt
+│   │   ├── staff_spotlight.txt
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   └── utils.sh
+├── DEPLOYMENT.md
+├── Documentation
+│   ├── ChaseWhiteRabbitMesh_Explaination.md
+│   ├── CheckDeadCommandCheatSheet.md
+│   ├── client-server-setup.md
+│   ├── costs.md
+│   ├── EXT_ETA_Link_Route.md
+│   ├── LocalVsExternalBandwidth.md
+│   ├── node-discovery-method-zero-install.md
+│   ├── SetUpToolsMonitoringNetworkHelp.md
+│   ├── structure.json
+│   └── structure.txt
+├── etc
+│   ├── nginx
+│   │   ├── sites-available
+│   │   │   ├── mesh.local
+│   │   │   ├── structure.json
+│   │   │   └── structure.txt
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── structure.json
+│   ├── structure.txt
+│   └── systemd
+│       ├── structure.json
+│       ├── structure.txt
+│       └── system
+│           ├── structure.json
+│           └── structure.txt
+├── .gitignore
+├── IPDB
+│   ├── install-ipdb.sh
+│   ├── node-status.sh
+│   ├── register-node.sh
+│   ├── show-topology.sh
+│   ├── structure.json
+│   └── structure.txt
+├── mesh-dashboard
+│   ├── admin
+│   │   ├── config.py
+│   │   ├── server.py
+│   │   ├── structure.json
+│   │   ├── structure.txt
+│   │   └── templates
+│   │       ├── dashboard.html
+│   │       ├── nodes.html
+│   │       ├── structure.json
+│   │       ├── structure.txt
+│   │       └── users.html
+│   ├── app
+│   │   ├── app.py
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── docs
+│   │   ├── ADMIN_GUIDE.md
+│   │   ├── CLIENT_SETUP.md
+│   │   ├── structure.json
+│   │   ├── structure.txt
+│   │   └── VOLUNTEER_GUIDE.md
+│   ├── examples
+│   │   ├── crontab.example
+│   │   ├── node-status.json
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── scripts
+│   │   ├── add-client.sh
+│   │   ├── add-volunteer.sh
+│   │   ├── setup-admin.sh
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── security
+│   │   ├── dashboard.html
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── static
+│   │   ├── css
+│   │   │   ├── main.css
+│   │   │   ├── structure.json
+│   │   │   └── structure.txt
+│   │   ├── index.html
+│   │   ├── js
+│   │   │   ├── dashboard.js
+│   │   │   ├── structure.json
+│   │   │   └── structure.txt
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── structure.json
+│   └── structure.txt
+├── mesh dashboard zip contents.md
+├── node_config_templates
+│   ├── .gitkeep
+│   ├── mesh-node.conf
+│   ├── structure.json
+│   └── structure.txt
+├── opt
+│   ├── mesh-network
+│   │   ├── docs
+│   │   │   ├── cheatsheets
+│   │   │   │   ├── structure.json
+│   │   │   │   └── structure.txt
+│   │   │   ├── structure.json
+│   │   │   ├── structure.txt
+│   │   │   ├── tutorials
+│   │   │   │   ├── structure.json
+│   │   │   │   └── structure.txt
+│   │   │   └── videos
+│   │   │       ├── structure.json
+│   │   │       └── structure.txt
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── structure.json
+│   └── structure.txt
+├── performance_optimization
+│   ├── bandwidth-profiles.conf
+│   ├── .gitkeep
+│   ├── SetUpToolsMonitoringNetworkHelp.md
+│   ├── structure.json
+│   └── structure.txt
+├── Plans
+│   ├── network_completion_plan.md
+│   ├── structure.json
+│   └── structure.txt
+├── README.md
+├── scripts
+│   ├── mesh-tools
+│   │   ├── mesh-node-status
+│   │   ├── mesh-profile-status
+│   │   ├── mesh-service-check
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── security
+│   │   ├── mesh-access-control
+│   │   ├── mesh-intrusion-detect
+│   │   ├── mesh-security-metrics
+│   │   ├── structure.json
+│   │   └── structure.txt
+│   ├── structure.json
+│   └── structure.txt
+├── Server_Plan
+│   ├── Local_First.md
+│   ├── READMEmesh.local.md
+│   ├── structure.json
+│   └── structure.txt
+├── structure.json
+├── structure.txt
+├── topology_diagrams
+│   ├── .gitkeep
+│   ├── README.md
+│   ├── structure.json
+│   └── structure.txt
+└── udp-quic
+    ├── .gitkeep
+    ├── quic-config.yaml
+    ├── structure.json
+    └── structure.txt
+
+38 directories, 147 files

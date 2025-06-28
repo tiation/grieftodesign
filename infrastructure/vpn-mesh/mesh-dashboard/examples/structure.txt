@@ -1,0 +1,7 @@
+/home/lappy/work/015_VPN_Mesh/mesh-dashboard/examples
+├── crontab.example
+├── node-status.json
+├── structure.json
+└── structure.txt
+
+1 directory, 4 files

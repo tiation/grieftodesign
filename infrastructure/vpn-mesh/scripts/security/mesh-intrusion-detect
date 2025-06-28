@@ -1,0 +1,198 @@
+#!/bin/bash
+
+# mesh-intrusion-detect - Monitor and detect potential security threats
+# Part of ChaseWhiteRabbit Mesh Network Infrastructure
+
+set -e
+
+SCRIPT_NAME=$(basename "$0")
+CONFIG_DIR="/etc/mesh-network"
+MONITOR_DIR="$CONFIG_DIR/security/monitor"
+LOG_DIR="$MONITOR_DIR/logs"
+RULES_FILE="$MONITOR_DIR/rules.conf"
+ALERT_LOG="$LOG_DIR/alerts.log"
+
+# Colors for output
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+# Print colored status
+print_status() {
+    local status=$1
+    local message=$2
+    case $status in
+        "OK")
+            echo -e "${GREEN}[OK]${NC} $message"
+            ;;
+        "ERROR")
+            echo -e "${RED}[ERROR]${NC} $message"
+            ;;
+        "WARNING")
+            echo -e "${YELLOW}[WARNING]${NC} $message"
+            ;;
+    esac
+}
+
+# Initialize monitoring system
+init_monitoring() {
+    mkdir -p "$MONITOR_DIR" "$LOG_DIR"
+    chmod 700 "$MONITOR_DIR" "$LOG_DIR"
+    
+    # Create default rules if they don't exist
+    if [ ! -f "$RULES_FILE" ]; then
+        cat > "$RULES_FILE" << EOF
+# Intrusion Detection Rules
+# Format: rule_type:parameter:threshold:action
+
+# Connection attempts
+connection:failed_auth:5:alert
+connection:rapid_connect:10:block
+
+# Bandwidth usage
+bandwidth:excessive:90:warn
+bandwidth:spike:200:alert
+
+# Node behavior
+behavior:unauthorized_port:any:block
+behavior:invalid_protocol:any:alert
+
+# System resources
+resources:cpu:90:warn
+resources:memory:90:warn
+resources:disk:90:warn
+EOF
+        chmod 600 "$RULES_FILE"
+    fi
+    
+    touch "$ALERT_LOG"
+    chmod 600 "$ALERT_LOG"
+}
+
+# Monitor network connections
+monitor_connections() {
+    print_status "OK" "Monitoring network connections..."
+    
+    # Check recent connection attempts
+    local failed_auths=$(journalctl -u mesh-network --since "5m ago" | grep "Authentication failed" | wc -l)
+    if [ "$failed_auths" -gt 5 ]; then
+        log_alert "WARNING" "Excessive failed authentication attempts: $failed_auths in 5 minutes"
+    fi
+    
+    # Monitor established connections
+    local conn_count=$(netstat -tn | grep ESTABLISHED | wc -l)
+    if [ "$conn_count" -gt 100 ]; then
+        log_alert "WARNING" "High number of established connections: $conn_count"
+    fi
+}
+
+# Monitor system resources
+monitor_resources() {
+    print_status "OK" "Monitoring system resources..."
+    
+    # CPU usage
+    local cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d. -f1)
+    if [ "$cpu_usage" -gt 90 ]; then
+        log_alert "WARNING" "High CPU usage: ${cpu_usage}%"
+    fi
+    
+    # Memory usage
+    local mem_usage=$(free | grep Mem | awk '{print int($3/$2 * 100)}')
+    if [ "$mem_usage" -gt 90 ]; then
+        log_alert "WARNING" "High memory usage: ${mem_usage}%"
+    fi
+    
+    # Disk usage
+    local disk_usage=$(df / | tail -1 | awk '{print $5}' | tr -d '%')
+    if [ "$disk_usage" -gt 90 ]; then
+        log_alert "WARNING" "High disk usage: ${disk_usage}%"
+    fi
+}
+
+# Monitor network traffic
+monitor_traffic() {
+    print_status "OK" "Monitoring network traffic..."
+    
+    # Check for unusual traffic patterns
+    if command -v tcpdump &>/dev/null; then
+        tcpdump -i any -c 100 2>/dev/null | while read -r line; do
+            if echo "$line" | grep -q "UDP flood"; then
+                log_alert "ERROR" "Possible UDP flood attack detected"
+            fi
+        done
+    fi
+}
+
+# Log alerts
+log_alert() {
+    local level=$1
+    local message=$2
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] [$level] $message" >> "$ALERT_LOG"
+    print_status "$level" "$message"
+    
+    # Take action based on alert level
+    case $level in
+        "ERROR")
+            # Immediate notification for serious issues
+            notify_admin "$message"
+            ;;
+        "WARNING")
+            # Log warning for review
+            echo "$message" >> "$MONITOR_DIR/warnings.log"
+            ;;
+    esac
+}
+
+# Notify administrator
+notify_admin() {
+    local message=$1
+    # Implement notification method (email, SMS, etc.)
+    echo "ALERT: $message" | mail -s "Mesh Network Security Alert" admin@localhost 2>/dev/null || true
+}
+
+# Main monitoring loop
+monitor_loop() {
+    while true; do
+        monitor_connections
+        monitor_resources
+        monitor_traffic
+        sleep 60
+    done
+}
+
+# Main execution
+main() {
+    case $1 in
+        init)
+            init_monitoring
+            print_status "OK" "Monitoring system initialized"
+            ;;
+        start)
+            if [ ! -d "$MONITOR_DIR" ]; then
+                init_monitoring
+            fi
+            print_status "OK" "Starting monitoring system"
+            monitor_loop
+            ;;
+        status)
+            if [ -f "$ALERT_LOG" ]; then
+                echo "Recent alerts:"
+                tail -n 10 "$ALERT_LOG"
+            else
+                print_status "WARNING" "No alert log found"
+            fi
+            ;;
+        *)
+            echo "Usage: $SCRIPT_NAME <command>"
+            echo
+            echo "Commands:"
+            echo "  init    Initialize monitoring system"
+            echo "  start   Start monitoring"
+            echo "  status  Show monitoring status"
+            exit 1
+            ;;
+    esac
+}
+
+main "$@"

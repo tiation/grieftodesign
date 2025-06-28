@@ -1,0 +1,213 @@
+# ChaseWhiteRabbit Community Pulse Configuration
+# Bringing teams together across limited connectivity
+
+# =====================================================================
+# GENERAL CONFIGURATION
+# =====================================================================
+general:
+  enabled: true
+  version: "1.0.0"
+  description: "Lightweight morale-boosting communication system"
+  cache_location: "/var/cache/mesh-network/community_pulse"
+  max_cache_size_mb: 50
+  offline_retention_days: 14
+
+# =====================================================================
+# CONTENT TYPES & SCHEDULING
+# =====================================================================
+content_types:
+  # Daily fun facts - extremely lightweight
+  fun_facts:
+    enabled: true
+    frequency: "daily"
+    scheduled_time: "07:00"  # Local time
+    max_size_bytes: 500
+    priority: "high"       # Will be delivered even on extremely_limited connections
+    multimedia: false
+    categories:
+      - "indonesia_facts"
+      - "tech_trivia"
+      - "nature_wonders"
+      - "space_facts"
+      - "mesh_network_achievements"
+    sources:
+      - "central_repository"
+      - "staff_contributions"
+      - "local_cache_rotation"
+    template: "templates/fun_fact.txt"
+
+  # Weekly team achievements - lightweight text
+  achievements:
+    enabled: true
+    frequency: "weekly"
+    scheduled_day: "friday"
+    scheduled_time: "16:00"  # Local time
+    max_size_bytes: 2000
+    priority: "medium"      # Will be delivered on limited connections or better
+    multimedia: false
+    rotate_regions: true    # Rotate featured region each week
+    highlight_count: 3      # Number of achievements to highlight
+    template: "templates/achievements.txt"
+    
+  # Monthly staff spotlight - text with optional small image
+  staff_spotlight:
+    enabled: true
+    frequency: "monthly"
+    scheduled_day: "1"      # First day of month
+    scheduled_time: "12:00" # Local time
+    max_size_bytes: 3000
+    image_max_size_bytes: 20000
+    image_compression: "high"
+    priority: "low"         # Only delivered on moderate connections or better
+    multimedia: true
+    nominations_enabled: true
+    template: "templates/staff_spotlight.txt"
+    
+  # Daily mood board - ultra lightweight mood sharing
+  mood_board:
+    enabled: true
+    frequency: "daily"
+    scheduled_time: "09:00" # Local time
+    max_size_bytes: 100
+    priority: "high"        # Will be delivered even on extremely_limited connections
+    multimedia: false
+    anonymized: true        # Only shows aggregate stats, not individual moods
+    moods:
+      - "Energized! 🌟"
+      - "Focused 🎯"
+      - "Determined 💪"
+      - "Learning 📚"
+      - "Challenged 🧩"
+      - "Tired 😴"
+      - "Need help 🆘"
+    template: "templates/mood_board.txt"
+
+  # Local community events - location specific
+  local_events:
+    enabled: true
+    frequency: "weekly"
+    scheduled_day: "monday"
+    scheduled_time: "08:00" # Local time
+    max_size_bytes: 1500
+    priority: "medium"      # Will be delivered on limited connections or better
+    multimedia: false
+    location_specific: true
+    template: "templates/local_events.txt"
+
+# =====================================================================
+# BANDWIDTH ADAPTATION
+# =====================================================================
+bandwidth_adaptation:
+  # Content delivery based on available bandwidth
+  extremely_limited_profile:
+    deliver_content_types:
+      - "fun_facts"
+      - "mood_board"
+    max_daily_bytes: 2000
+    compress_text: true
+    deliver_frequency: "daily"
+    
+  very_limited_profile:
+    deliver_content_types:
+      - "fun_facts"
+      - "mood_board"
+      - "achievements"
+    max_daily_bytes: 5000
+    compress_text: true
+    deliver_frequency: "daily"
+    
+  limited_profile:
+    deliver_content_types:
+      - "fun_facts"
+      - "mood_board"
+      - "achievements"
+      - "local_events"
+    max_daily_bytes: 10000
+    compress_text: true
+    deliver_frequency: "daily"
+    
+  moderate_profile:
+    deliver_content_types:
+      - "fun_facts"
+      - "mood_board"
+      - "achievements"
+      - "local_events"
+      - "staff_spotlight"
+    max_daily_bytes: 30000
+    compress_text: false
+    deliver_frequency: "twice_daily"
+    
+  good_profile:
+    deliver_content_types: "all"
+    max_daily_bytes: 100000
+    compress_text: false
+    deliver_frequency: "real_time"
+
+# =====================================================================
+# USER CONTRIBUTION SETTINGS
+# =====================================================================
+user_contributions:
+  enabled: true
+  moderation_required: false
+  daily_submission_limit: 3
+  submission_types:
+    - "fun_facts"
+    - "achievements"
+    - "staff_spotlight_nominations"
+    - "mood"
+    - "local_events"
+  template_guided: true
+  templates_directory: "templates/contributions/"
+  max_submission_size_bytes: 1000
+
+# =====================================================================
+# OFFLINE CACHING STRATEGY
+# =====================================================================
+offline_caching:
+  preload_days: 7           # Cache content for 7 days in advance
+  prioritize_local_content: true
+  content_rotation:
+    enabled: true
+    rotation_interval_hours: 8
+  emergency_content:
+    enabled: true
+    count: 30               # Emergency fun facts/messages if offline > 7 days
+
+# =====================================================================
+# NOTIFICATION SETTINGS
+# =====================================================================
+notifications:
+  enabled: true
+  quiet_hours:
+    enabled: true
+    start_time: "22:00"
+    end_time: "06:00"
+  methods:
+    system_notification: true
+    status_bar: true
+    daily_summary: true
+  custom_sound: false       # Conserve bandwidth
+
+# =====================================================================
+# CULTURAL CUSTOMIZATIONS
+# =====================================================================
+cultural_customizations:
+  language:
+    default: "en"
+    supported:
+      - "en"
+      - "id"  # Indonesian
+      - "jv"  # Javanese
+      - "su"  # Sundanese
+  regional_content:
+    enabled: true
+    regions:
+      - "jakarta"
+      - "sumatra"
+      - "sulawesi"
+      - "kalimantan"
+      - "papua"
+  local_holidays:
+    enabled: true
+    source_file: "cultural/indonesian_holidays.yaml"
+

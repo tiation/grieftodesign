@@ -1,0 +1,17 @@
+/home/lappy/work/015_VPN_Mesh/scripts
+├── mesh-tools
+│   ├── mesh-node-status
+│   ├── mesh-profile-status
+│   ├── mesh-service-check
+│   ├── structure.json
+│   └── structure.txt
+├── security
+│   ├── mesh-access-control
+│   ├── mesh-intrusion-detect
+│   ├── mesh-security-metrics
+│   ├── structure.json
+│   └── structure.txt
+├── structure.json
+└── structure.txt
+
+3 directories, 12 files

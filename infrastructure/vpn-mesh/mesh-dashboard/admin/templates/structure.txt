@@ -1,0 +1,8 @@
+/home/lappy/work/015_VPN_Mesh/mesh-dashboard/admin/templates
+├── dashboard.html
+├── nodes.html
+├── structure.json
+├── structure.txt
+└── users.html
+
+1 directory, 5 files

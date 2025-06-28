@@ -1,0 +1,13 @@
+
+# Fun Fact of the Day - ${DATE}
+
+${CATEGORY_EMOJI} ${FACT_TITLE}
+
+${FACT_TEXT}
+
+-----------------------
+Did you know? The average fact takes only ${TRANSMISSION_SIZE} bytes to transmit, 
+but can spark days of interesting conversations!
+
+Submit your own fun fact: Type "pulse-submit fun-fact" on your terminal.
+

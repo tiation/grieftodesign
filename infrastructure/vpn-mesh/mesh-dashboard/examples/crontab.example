@@ -1,0 +1,2 @@
+*/5 * * * * /usr/bin/curl -X POST http://<collector-ip>/heartbeat -H "Content-Type: application/json" -d @/tmp/node-status.json
+

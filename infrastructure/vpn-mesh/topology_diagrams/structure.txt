@@ -1,0 +1,7 @@
+/home/lappy/work/015_VPN_Mesh/topology_diagrams
+├── .gitkeep
+├── README.md
+├── structure.json
+└── structure.txt
+
+1 directory, 4 files

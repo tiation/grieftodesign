@@ -1,0 +1,30 @@
+/home/lappy/work/015_VPN_Mesh/community_pulse
+├── config.sh
+├── data
+│   ├── fun_facts
+│   │   ├── indonesia_facts.txt
+│   │   ├── mesh_network_achievements.txt
+│   │   ├── structure.json
+│   │   ├── structure.txt
+│   │   └── tech_trivia.txt
+│   ├── structure.json
+│   └── structure.txt
+├── fun_facts.sh
+├── install.sh
+├── mood.sh
+├── pulse-cli.sh
+├── pulse-config.yaml
+├── pulse.sh
+├── structure.json
+├── structure.txt
+├── templates
+│   ├── achievements.txt
+│   ├── fun_fact.txt
+│   ├── local_events.txt
+│   ├── mood_board.txt
+│   ├── staff_spotlight.txt
+│   ├── structure.json
+│   └── structure.txt
+└── utils.sh
+
+4 directories, 24 files

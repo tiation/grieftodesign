@@ -1,0 +1,10 @@
+/home/lappy/work/015_VPN_Mesh/community_pulse/templates
+├── achievements.txt
+├── fun_fact.txt
+├── local_events.txt
+├── mood_board.txt
+├── staff_spotlight.txt
+├── structure.json
+└── structure.txt
+
+1 directory, 7 files

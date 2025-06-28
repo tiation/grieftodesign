@@ -1,0 +1,14 @@
+/home/lappy/work/015_VPN_Mesh/opt/mesh-network/docs
+├── cheatsheets
+│   ├── structure.json
+│   └── structure.txt
+├── structure.json
+├── structure.txt
+├── tutorials
+│   ├── structure.json
+│   └── structure.txt
+└── videos
+    ├── structure.json
+    └── structure.txt
+
+4 directories, 8 files
