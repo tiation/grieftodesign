@@ -172,6 +172,57 @@ Drug prohibition has global patterns of racial and colonial control:
 - **International Drug Control Treaties**: Primarily targeted substances used in colonized regions while protecting European practices
 - **Contemporary Enforcement**: International pressure and military aid tied to drug enforcement disproportionately affects Global South
 
+## Political Manipulation of Drug Policy: A Tool for Votes and Power
+
+### Historical Context: Prohibition as a Political Strategy
+
+Drug policy has long been wielded as a political tool, often prioritizing electoral gains over evidence-based practices.
+
+**Prohibition Era Lessons:**
+- **Moral Panic as Mobilization**: Politicians utilized fear and moral rhetoric to rally voter support for alcohol prohibition, capitalizing on social anxieties.
+- **Ineffectiveness Documented**: The 18th Amendment led to widespread bootlegging, crime rise, and enforcement challenges, illustrating the counterproductive nature of sweeping bans.
+
+### Modern Drug Wars: Tough on Crime for Electoral Gain
+
+The 'War on Drugs' continues this legacy, leveraging fear of crime for political advantage:
+
+- **Nixon's Playbook**: The Nixon administration weaponized drug fears to target political adversaries and marginalized communities.
+- **Electoral Success**: "Tough on crime" narratives persist, proving politically advantageous despite lack of tangible benefits in crime reduction or public health.
+
+### Rhetoric vs. Reality: The Disconnect
+
+**Rhetorical Tools:**
+- **Public Safety Claims**: Politicians often evoke "safety" to justify aggressive drug policies.
+- **Moral Dichotomies**: Framing users as 'criminals' vs. non-users as 'upstanding citizens.'
+
+**Reality Check:**
+- **Crime Rate Disconnection**: No clear connection between draconian drug laws and reduced crime rates.
+- **Enforcement Failures**: Continual criminalization disproportionately impacts marginalized groups without decreasing drug availability.
+
+### Voting Patterns and Drug Policy
+
+**Voter Perceptions:**
+- Drug policy changes can signal moral or social stability, influencing voter allegiance.
+- The appearance of decisiveness in drug policy often impacts perceptions of leadership strength.
+
+**Ineffective Policy Indicators:**
+- Recidivism and incarceration rates remain high, with minor impact from drug policies.
+- Public health suffers from lack of focus on harm reduction and treatment.
+
+### Unpacking the Bias
+
+**Why Politicians Persist:**
+- **Simple Narratives**: Strong, simplistic narratives often garner more support than complex, nuanced discussions.
+- **Benefiting Interests**: Political capital is often tied to maintaining the status quo for various stakeholders, including private prison lobbies and law enforcement agencies.
+
+**Impact on Policy Design**
+- **Short-Term Gains, Long-Term Costs**: Policy decisions often cater to immediate electoral benefits rather than sustainable solutions.
+- **Invisible Costs**: Long-term societal costs like community disintegration and intergenerational trauma are sidelined.
+
+### Conclusion: The Cycle of Ineffectiveness
+
+The painful legacy from prohibition to modern drug policies reveals a cycle of using drugs as political currency rather than addressing underlying issues. Until drug policy is based on evidence and human rights rather than electoral calculus, it will continue to fail both communities and individuals.
+
 ## Implications for Policy Reform
 
 Understanding the non-scientific origins of drug prohibition leads to several conclusions:
