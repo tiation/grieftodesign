@@ -97,6 +97,7 @@ It's about making sure that no child dies from poverty, violence, or systemic ne
 
 - **[Read the complete vision](./everything-at-once.md)** - Everything at once transformation
 - **[See the financial proof](./financial-proof-plan.md)** - Numbers-savvy analysis
+- **[The Pet Humans Blueprint](./pet-humans-blueprint.md)** - Step-by-step implementation guide
 - **[Internet as a human right](./internet-vpn-access.md)** - Universal connectivity strategy
 - **Explore the research** in our `/research` directory
 - **Review the legislation** in our `/legislation` directory  
