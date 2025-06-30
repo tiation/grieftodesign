@@ -1,73 +1,80 @@
-# Welcome to your Lovable project
 
-## Project info
+# The Grief-to-Design Blueprint
+![image](https://github.com/user-attachments/assets/2dd052a7-fe0d-4119-aebc-0bc8e3dab711)
 
-**URL**: https://lovable.dev/projects/da292f80-d737-4ac2-9073-1f06f41f9e86
+## Purpose
 
-## How can I edit this code?
+This document is a public, perpetual record. It captures the why, the what, and the how of a complete systemic redesign — built from personal loss, designed to prevent future harm. Anyone is free to read, share, adapt, and continue this work. If the original author is gone, let this be a living foundation.
 
-There are several ways of editing your application.
+## Origin
 
-**Use Lovable**
+![image](https://github.com/user-attachments/assets/d9d20502-c1a1-4333-84cd-bc5f479de9d4)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/da292f80-d737-4ac2-9073-1f06f41f9e86) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+This work was created by someone who lost their child. Not to ideology. To bad luck. Was it preventable? You bet. I did a causal analysis like Cockburn Cement (marginal industry) does causal analysis. There are obvious preventions. And yet, I see longer lines of causality containing remnants of systemic failure. In my case, and in the case of many other parents I worked with prior. And many other parents who shared their story, meant to comfort, after. 
 
-**Use your preferred IDE**
+I have nothing. Anymore. And I will not die without changing the things I think had even a fraction of causality in the loss my baby had. I will not do anything negative in her name no matter how much my feeling at times encourages it. I live forever for you. My daughter. My son. We lost everything we ever had together. In seconds. Gone. That day.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This blueprint is my promise turned into process.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Core Belief
 
-Follow these steps:
+> People are good. Systems are broken. We can fix the systems.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+:
+we start again... not from zero but from loss
 
-# Step 3: Install the necessary dependencies.
-npm i
+# The Grief-to-Design Blueprint
+![image](https://github.com/user-attachments/assets/2dd052a7-fe0d-4119-aebc-0bc8e3dab711)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Purpose
 
-**Edit a file directly in GitHub**
+This document is a public, perpetual record. It captures the why, the what, and the how of a complete systemic redesign — built from personal loss, designed to prevent future harm. Anyone is free to read, share, adapt, and continue this work. If the original author is gone, let this be a living foundation.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Origin
 
-**Use GitHub Codespaces**
+![image](https://github.com/user-attachments/assets/d9d20502-c1a1-4333-84cd-bc5f479de9d4)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
+This work was created by someone who lost their child. Not to ideology. To bad luck. Was it preventable? You bet. I did a causal analysis like Cockburn Cement (marginal industry) does causal analysis. There are obvious preventions. And yet, I see longer lines of causality containing remnants of systemic failure. In my case, and in the case of many other parents I worked with prior. And many other parents who shared their story, meant to comfort, after. 
 
-This project is built with:
+I have nothing. Anymore. And I will not die without changing the things I think had even a fraction of causality in the loss my baby had. I will not do anything negative in her name no matter how much my feeling at times encourages it. I live forever for you. My daughter. My son. We lost everything we ever had together. In seconds. Gone. That day.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This blueprint is my promise turned into process.
 
-## How can I deploy this project?
+## Core Belief
 
-Simply open [Lovable](https://lovable.dev/projects/da292f80-d737-4ac2-9073-1f06f41f9e86) and click on Share -> Publish.
+> People are good. Systems are broken. We can fix the systems.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## Grief-to-Design: The Template (For Anyone to Use)
+:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# The Grief-to-Design Blueprint
+![image](https://github.com/user-attachments/assets/2dd052a7-fe0d-4119-aebc-0bc8e3dab711)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Purpose
+
+This document is a public, perpetual record. It captures the why, the what, and the how of a complete systemic redesign — built from personal loss, designed to prevent future harm. Anyone is free to read, share, adapt, and continue this work. If the original author is gone, let this be a living foundation.
+
+## Origin
+
+![image](https://github.com/user-attachments/assets/d9d20502-c1a1-4333-84cd-bc5f479de9d4)
+
+
+This work was created by someone who lost their child. Not to ideology. To bad luck. Was it preventable? You bet. I did a causal analysis like Cockburn Cement (marginal industry) does causal analysis. There are obvious preventions. And yet, I see longer lines of causality containing remnants of systemic failure. In my case, and in the case of many other parents I worked with prior. And many other parents who shared their story, meant to comfort, after. 
+
+I have nothing. Anymore. And I will not die without changing the things I think had even a fraction of causality in the loss my baby had. I will not do anything negative in her name no matter how much my feeling at times encourages it. I live forever for you. My daughter. My son. We lost everything we ever had together. In seconds. Gone. That day.
+
+This blueprint is my promise turned into process.
+
+## Core Belief
+
+> People are good. Systems are broken. We can fix the systems.
+
+---
+
+## Grief-to-Design: The Template (For Anyone to Use)
