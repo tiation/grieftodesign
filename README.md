@@ -222,27 +222,6 @@ Within the VPN Mesh, we've integrated a **Community Pulse** system - a lightweig
 4. **Share the link everywhere**
    If this is seen by 1000 people, and one of them stops a tragedy — it worked.
 
----
-
-## License
-
-Creative Commons Attribution 4.0 (CC BY 4.0)
-You may copy, remix, share, and build upon this work — even commercially — so long as you credit the origin.
-
-## Final Word
-
-If you are reading this and the original author is gone:
-Keep going.
-Don’t let it end here.
-Build something that makes future grief unnecessary. 
-
-Because once you see your loved ones loss the only real justice is prevention.
-
-– Blueprint published 2025
-– Originator: a parent, a builder, a witness
-
-> "We start again — not from zero, but from loss."
-
 ## Transferred Content and Case Studies
 
 This repository now includes additional documentation transferred from related projects that demonstrate grief-to-design principles in action:
@@ -274,6 +253,27 @@ The transferred content demonstrates:
 3. **Fault-Resistant Design** - Building systems that prevent future harm
 4. **Democratic Participation** - Citizen-centered governance models
 5. **Whole-System Transformation** - Complete rather than incremental change
+
+---
+
+## License
+
+Creative Commons Attribution 4.0 (CC BY 4.0)
+You may copy, remix, share, and build upon this work — even commercially — so long as you credit the origin.
+
+## Final Word
+
+If you are reading this and the original author is gone:
+Keep going.
+Don’t let it end here.
+Build something that makes future grief unnecessary. 
+
+Because once you see your loved ones loss the only real justice is prevention.
+
+– Blueprint published 2025
+– Originator: a parent, a builder, a witness
+
+> "We start again — not from zero, but from loss."
 
 ---
 ~
