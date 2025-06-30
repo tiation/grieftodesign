@@ -1,0 +1,93 @@
+= Welcome to the Grief-to-Design Wiki =
+
+'''From loss to prevention, from tragedy to transformation'''
+
+== Mission ==
+This wiki documents the complete Grief-to-Design framework: a systematic approach to preventing future harm by redesigning the systems that create unnecessary suffering.
+
+== Core Belief ==
+''People are good. Systems are broken. We can fix the systems.''
+
+== The $19 Trillion Solution ==
+Australia has $19 trillion in national wealth. Our proposal:
+* '''Universal Asset Allocation''': $200k housing + $200k business credit for every adult
+* '''Income Security''': $800/week for 5 years from asset dividends  
+* '''Debt Elimination''': Pay off all public debt
+* '''System Transformation''': From scarcity to abundance-based governance
+
+== Featured Pages ==
+
+=== Core Framework ===
+* [[Grief-to-Design Template]] - 5-question framework anyone can use
+* [[The 12 Acts of Systemic Redesign]] - Complete legislative package
+* [[Trust-First Governance]] - How abundance enables cooperation
+
+=== Financial Analysis ===
+* [[19T Financial Proof]] - Mathematical verification of the solution
+* [[Asset Map and Leverage Analysis]] - Where the money comes from
+* [[Liquidity Schedule]] - Year-by-year implementation timeline
+
+=== Legislative Package ===
+* [[Sovereign Equity Fund Act]] - Main legislation
+* [[Two-Monkey Mutual-Benefit Act]] - Policy fairness standard
+* [[No-Strike Child Guidance Act]] - Violence-free child rearing
+* [[Universal Dividend Act]] - $800/week for all citizens
+
+=== Research Foundation ===
+* [[Cooperation vs Competition Research]] - Scientific evidence for cooperation
+* [[People Are Good Governance]] - Governance assuming human goodness
+* [[Reality Check 19T Solution]] - Political feasibility analysis
+
+=== Infrastructure ===
+* [[VPN Mesh Network]] - Universal internet access infrastructure
+* [[Community Pulse System]] - Team communication in limited connectivity
+
+== Getting Started ==
+
+=== For Policy Makers ===
+1. Read [[19T Financial Proof]] for the mathematical foundation
+2. Review [[The 12 Acts of Systemic Redesign]] for implementation
+3. Examine [[Liquidity Schedule]] for economic impact modeling
+
+=== For Activists ===
+1. Use the [[Grief-to-Design Template]] with your own story
+2. Share the [[Asset Map and Leverage Analysis]] to show feasibility
+3. Adapt the [[Legislative Package]] for your jurisdiction
+
+=== For Researchers ===
+1. Study [[Cooperation vs Competition Research]] for scientific validation
+2. Explore [[Trust-First Governance]] frameworks
+3. Review [[Implementation Roadmap]] for practical steps
+
+== Three Brands, One Mission ==
+
+=== 💰 $19T ===
+''"I'm selfish → so are you."''<br>
+Converting Australia's wealth into opportunities for every citizen
+
+=== 🐰 Chase White Rabbit ===
+''"People aren't broken. Fix the system."''<br>
+Following curiosity to find systemic solutions
+
+=== 🌍 Tiation ===
+''"Get bored of it."''<br>
+Solving problems until they're routine
+
+== How to Contribute ==
+
+* '''Share your story''': Use the grief-to-design template
+* '''Improve documentation''': Add research, refine proposals
+* '''Spread the word''': Every connection matters
+* '''Implement locally''': Try pieces in your community
+
+== License ==
+All content is available under [[Creative Commons Attribution 4.0]]
+
+== Contact ==
+This is a living document. If something happens to the original author, keep building. Don't let it end here.
+
+'''"We start again — not from zero, but from loss."'''
+
+[[Category:Main]]
+[[Category:Grief-to-Design]]
+[[Category:System Transformation]]

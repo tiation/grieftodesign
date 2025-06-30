@@ -29,10 +29,7 @@ fi
 
 # Generate private key
 echo -e "${YELLOW}Generating private key...${NC}"
-openssl genpkey -algorithm RSA -out $SSL_DIR/grieftodesign.key -pkcs8 -aes256 -pass pass:grieftodesign2024
-
-# Remove passphrase from private key (for automated deployment)
-openssl rsa -in $SSL_DIR/grieftodesign.key -out $SSL_DIR/grieftodesign.key -passin pass:grieftodesign2024
+openssl genrsa -out $SSL_DIR/grieftodesign.key 2048
 
 # Create certificate configuration
 echo -e "${YELLOW}Creating certificate configuration...${NC}"

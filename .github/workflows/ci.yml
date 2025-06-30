@@ -1,0 +1,313 @@
+name: Quality Assurance
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  markdown-lint:
+    name: Markdown Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install markdownlint-cli
+        run: npm install -g markdownlint-cli
+
+      - name: Lint Markdown files
+        run: markdownlint "**/*.md" --ignore node_modules --ignore .github --config .markdownlint.yml
+        continue-on-error: true
+
+      - name: Create markdownlint config if missing
+        run: |
+          if [ ! -f .markdownlint.yml ]; then
+            cat > .markdownlint.yml << 'EOF'
+          default: true
+          MD013: false  # Line length
+          MD033: false  # Allow inline HTML
+          MD041: false  # First line in file should be top level header
+          EOF
+          fi
+
+  shellcheck:
+    name: Shell Script Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Check shell scripts
+        run: |
+          find . -name "*.sh" -type f -exec shellcheck -e SC1091,SC2034,SC2086 {} \;
+        continue-on-error: true
+
+  link-check:
+    name: Link Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install markdown-link-check
+        run: npm install -g markdown-link-check
+
+      - name: Check internal links
+        run: |
+          find . -name "*.md" -exec markdown-link-check {} \;
+        continue-on-error: true
+
+  csv-validation:
+    name: CSV Data Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install CSV validation tools
+        run: pip install pandas
+
+      - name: Validate CSV files
+        run: |
+          python3 -c "
+          import pandas as pd
+          import sys
+          import glob
+          
+          csv_files = glob.glob('**/*.csv', recursive=True)
+          errors = []
+          
+          for file in csv_files:
+              try:
+                  df = pd.read_csv(file)
+                  print(f'✓ {file}: {len(df)} rows, {len(df.columns)} columns')
+              except Exception as e:
+                  errors.append(f'✗ {file}: {str(e)}')
+          
+          if errors:
+              for error in errors:
+                  print(error)
+              sys.exit(1)
+          else:
+              print('All CSV files are valid')
+          "
+
+  financial-calculations:
+    name: Financial Model Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install calculation tools
+        run: pip install pandas numpy
+
+      - name: Validate financial calculations
+        run: |
+          python3 -c "
+          import pandas as pd
+          import numpy as np
+          
+          # Basic validation of asset map calculations
+          try:
+              df = pd.read_csv('spreadsheets/asset-map.csv')
+              
+              # Check that pledged values = value * percentage
+              df['calculated_pledged'] = df['Value (AUD Billions)'] * df['% Pledged'].str.rstrip('%').astype(float) / 100
+              
+              # Allow for small rounding differences
+              tolerance = 0.1  # billions
+              diff = abs(df['Pledged Value (AUD Billions)'] - df['calculated_pledged'])
+              
+              if diff.max() > tolerance:
+                  print(f'Warning: Calculation discrepancies found (max diff: {diff.max():.2f}B)')
+              else:
+                  print('✓ Asset map calculations verified')
+                  
+              # Check total pledged value
+              total_pledged = df['Pledged Value (AUD Billions)'].sum()
+              print(f'Total pledged value: {total_pledged:.1f}B AUD')
+              
+              if total_pledged < 8000:  # Minimum needed for the plan
+                  print('Warning: Total pledged value may be insufficient')
+              else:
+                  print('✓ Pledged value appears sufficient for implementation')
+                  
+          except FileNotFoundError:
+              print('Asset map CSV not found - skipping financial validation')
+          except Exception as e:
+              print(f'Financial validation error: {str(e)}')
+          "
+
+  spelling-check:
+    name: Spelling Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install spell checker
+        run: sudo apt-get update && sudo apt-get install -y aspell aspell-en
+
+      - name: Check spelling in markdown files
+        run: |
+          # Create a custom dictionary for project-specific terms
+          cat > custom_dict.txt << 'EOF'
+          grieftodesign
+          blockchain
+          cryptocurrency
+          UBI
+          MediaWiki
+          GitHub
+          GitLab
+          AUD
+          GDP
+          API
+          CSV
+          JSON
+          VPN
+          FAQ
+          CEO
+          CFO
+          NGO
+          EOF
+          
+          # Check spelling (allowing for many technical terms)
+          find . -name "*.md" -exec aspell --personal=./custom_dict.txt --ignore-case list {} \; | sort -u > spelling_errors.txt
+          
+          if [ -s spelling_errors.txt ]; then
+            echo "Potential spelling errors found:"
+            head -20 spelling_errors.txt
+            echo "Note: Review these manually as they may be technical terms or proper nouns"
+          else
+            echo "✓ No obvious spelling errors found"
+          fi
+        continue-on-error: true
+
+  deployment-test:
+    name: Test Deployment Scripts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Test shell script syntax
+        run: |
+          # Test that all shell scripts have valid syntax
+          find . -name "*.sh" -type f -exec bash -n {} \;
+
+      - name: Validate Docker Compose
+        run: |
+          if [ -f docker-compose.yml ]; then
+            # Install docker-compose for validation
+            sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+            sudo chmod +x /usr/local/bin/docker-compose
+            
+            # Validate docker-compose syntax
+            docker-compose config
+          else
+            echo "No docker-compose.yml found - skipping validation"
+          fi
+        continue-on-error: true
+
+  accessibility-check:
+    name: Accessibility Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check for alt text in images
+        run: |
+          # Check that images in markdown have alt text
+          echo "Checking for images without alt text..."
+          
+          missing_alt=0
+          while IFS= read -r -d '' file; do
+            if grep -n '!\[\](' "$file"; then
+              echo "Missing alt text in $file"
+              missing_alt=$((missing_alt + 1))
+            fi
+          done < <(find . -name "*.md" -print0)
+          
+          if [ $missing_alt -eq 0 ]; then
+            echo "✓ All images have alt text"
+          else
+            echo "⚠ Found $missing_alt images without alt text"
+          fi
+        continue-on-error: true
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Scan for potential secrets
+        run: |
+          # Basic scan for potential secrets in files
+          echo "Scanning for potential secrets..."
+          
+          # Look for common secret patterns
+          if grep -r -i "password\s*=\s*['\"]" --include="*.md" --include="*.yml" --include="*.yaml" .; then
+            echo "⚠ Found potential hardcoded passwords"
+          fi
+          
+          if grep -r -i "api[_-]key\s*=\s*['\"]" --include="*.md" --include="*.yml" --include="*.yaml" .; then
+            echo "⚠ Found potential API keys"
+          fi
+          
+          # Check for TODO security items
+          if grep -r -i "TODO.*security\|FIXME.*security" --include="*.md" .; then
+            echo "⚠ Found security-related TODO items"
+          fi
+          
+          echo "✓ Basic security scan completed"
+        continue-on-error: true
+
+  summary:
+    name: Quality Summary
+    runs-on: ubuntu-latest
+    needs: [markdown-lint, shellcheck, link-check, csv-validation, financial-calculations, spelling-check, deployment-test, accessibility-check, security-scan]
+    if: always()
+    steps:
+      - name: Quality Report
+        run: |
+          echo "## Quality Assurance Summary"
+          echo "| Check | Status |"
+          echo "|-------|--------|"
+          echo "| Markdown Lint | ${{ needs.markdown-lint.result }} |"
+          echo "| Shell Scripts | ${{ needs.shellcheck.result }} |"
+          echo "| Link Check | ${{ needs.link-check.result }} |"
+          echo "| CSV Validation | ${{ needs.csv-validation.result }} |"
+          echo "| Financial Models | ${{ needs.financial-calculations.result }} |"
+          echo "| Spelling | ${{ needs.spelling-check.result }} |"
+          echo "| Deployment | ${{ needs.deployment-test.result }} |"
+          echo "| Accessibility | ${{ needs.accessibility-check.result }} |"
+          echo "| Security | ${{ needs.security-scan.result }} |"

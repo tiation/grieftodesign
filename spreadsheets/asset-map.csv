@@ -1,0 +1,24 @@
+Asset Category,Asset Type,Value (AUD Billions),% Pledged,Pledged Value (AUD Billions),Source,Risk Level,Liquidity Timeline
+Real Estate,Residential Housing,9800,35%,3430,ABS National Wealth Survey 2023,Low,12-18 months
+Real Estate,Commercial Property,2100,40%,840,Property Council Australia,Medium,18-24 months
+Corporate Assets,ASX Listed Companies,2800,45%,1260,ASX Market Capitalization,Medium,6-12 months
+Corporate Assets,Private Companies,1200,25%,300,ABS Business Register,High,24-36 months
+Infrastructure,Transport Networks,890,50%,445,Infrastructure Australia,Low,36-48 months
+Infrastructure,Energy Systems,650,45%,293,AEMO Asset Register,Low,24-36 months
+Infrastructure,Water Systems,320,40%,128,Bureau of Meteorology,Low,36-48 months
+Natural Resources,Mineral Reserves,1500,30%,450,Geoscience Australia,Medium,12-24 months
+Natural Resources,Agricultural Land,800,20%,160,ABARES Land Use,Low,24-36 months
+Financial Assets,Superannuation Funds,3400,15%,510,APRA Statistics,Low,6-12 months
+Financial Assets,Bank Deposits,1100,10%,110,RBA Banking Statistics,Low,Immediate
+Financial Assets,Government Securities,650,60%,390,AOFM Debt Portfolio,Low,Immediate
+Technology Assets,Intellectual Property,450,35%,158,IP Australia,High,12-18 months
+Technology Assets,Digital Infrastructure,280,40%,112,Communications Alliance,Medium,12-18 months
+Commodities,Gold Reserves,120,80%,96,RBA Gold Holdings,Low,Immediate
+Commodities,Other Precious Metals,45,70%,32,Mining Industry Data,Medium,3-6 months
+Education Assets,University Property,380,30%,114,Universities Australia,Low,24-36 months
+Education Assets,Research Facilities,180,25%,45,ARC Asset Database,Medium,36-48 months
+Healthcare Assets,Hospital Infrastructure,420,35%,147,Health Department,Low,36-48 months
+Healthcare Assets,Medical Equipment,85,20%,17,TGA Equipment Register,Medium,12-18 months
+Government Assets,Land Holdings,2200,50%,1100,Department of Finance,Low,24-36 months
+Government Assets,Buildings,890,45%,401,Property Services,Low,18-24 months
+Totals,,31240,26.9%,8428,Multiple Sources,Mixed,Varies
