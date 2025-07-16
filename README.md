@@ -1,8 +1,23 @@
----
-we start again... not from zero but from loss
+# 💔➡️🎨 GriefToDesign: Where Loss Becomes Legacy
 
-# The Grief-to-Design Blueprint
+<div align="center">
+
+![GriefToDesign Banner](https://img.shields.io/badge/Transform-Grief%20Into%20Design-purple?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTEyIDIxLjM1bC0xLjQ1LTEuMzJDNS40IDE1LjM2IDIgMTIuMjggMiA4LjUgMiA1LjQyIDQuNDIgMyA3LjUgM2MxLjc0IDAgMy40MS44MSA0LjUgMi4wOUMxMy4wOSAzLjgxIDE0Ljc2IDMgMTYuNSAzIDE5LjU4IDMgMjIgNS40MiAyMiA4LjVjMCAxLjc4LTMuNCA2Ljg2LTguNTUgMTEuNTRMMTIgMjEuMzV6Ii8+PC9zdmc+)
+
+**"We start again... not from zero but from loss"**
+
+*Transforming personal tragedy into systemic solutions that prevent future grief*
+
+[![Website](https://img.shields.io/badge/Website-Live-brightgreen?style=flat-square)](https://tiation.github.io/grieftodesign)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
+[![Framework](https://img.shields.io/badge/Framework-Grief%20to%20Design-purple?style=flat-square)](docs/framework/README.md)
+[![Community](https://img.shields.io/badge/Community-Growing-orange?style=flat-square)](https://github.com/tiation/grieftodesign/discussions)
+
 ![image](https://github.com/user-attachments/assets/2dd052a7-fe0d-4119-aebc-0bc8e3dab711)
+
+</div>
+
+---
 
 ## Purpose
 
