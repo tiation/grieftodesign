@@ -7,8 +7,21 @@
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,css,md}'",
+    "format:check": "prettier --check 'src/**/*.{ts,tsx,js,jsx,json,css,md}'",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "type-check": "tsc --noEmit",
+    "preview": "vite preview",
+    "analyze": "vite-bundle-analyzer",
+    "security-audit": "npm audit --audit-level=moderate"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
