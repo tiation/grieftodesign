@@ -1,0 +1,120 @@
+name: 🛡️ Child Safety Concern
+description: Report concerns related to child safety, protection, or wellbeing
+title: "[CHILD SAFETY] "
+labels: ["🛡️ child-safety", "⚡ urgent", "needs-review"]
+assignees:
+  - # Add child safety team members here
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🛡️ Child Safety First
+        
+        We take all child safety concerns seriously. If this is an **emergency situation** where a child is in immediate danger:
+        
+        **CALL 911 IMMEDIATELY**
+        
+        For non-emergency but urgent concerns, contact our Child Safety Team: safety@grieftodesign.org
+        
+        This form is for documentation, system improvements, and policy concerns.
+        
+        **All reports are reviewed within 2 hours.**
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How urgent is this safety concern?
+      options:
+        - "🔴 Critical - Immediate child safety risk"
+        - "🟡 High - Potential safety risk"
+        - "🟢 Medium - Safety improvement needed"
+        - "🔵 Low - General safety suggestion"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Safety Category
+      description: What type of safety concern is this?
+      options:
+        - "Physical Safety - Risk of injury or harm"
+        - "Digital Safety - Online protection concerns"
+        - "Emotional Safety - Trauma or mental health"
+        - "Systemic Safety - Policy or process failures"
+        - "Community Safety - Environmental concerns"
+        - "Other - Please describe below"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of Safety Concern
+      description: Please describe the safety concern in detail. Be specific but avoid sharing personal information of children.
+      placeholder: |
+        Describe:
+        - What is the safety concern?
+        - How might this affect child safety?
+        - What systems or processes might need improvement?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and Background
+      description: Any additional context that would help us understand this concern?
+      placeholder: |
+        - Where did you notice this concern?
+        - Are there specific scenarios where this becomes a risk?
+        - Have you seen this type of concern before?
+
+  - type: textarea
+    id: suggested-solution
+    attributes:
+      label: Suggested Solution (Optional)
+      description: Do you have ideas for how to address this safety concern?
+      placeholder: |
+        - What changes would make this safer for children?
+        - Are there best practices we should consider?
+        - What would you do if these were your own children?
+
+  - type: textarea
+    id: affected-groups
+    attributes:
+      label: Affected Groups
+      description: Which children or families might be affected by this concern?
+      placeholder: |
+        - What age groups might be at risk?
+        - Are certain communities more vulnerable?
+        - Does this affect all users or specific groups?
+
+  - type: checkboxes
+    id: safety-check
+    attributes:
+      label: Safety Verification
+      description: Please confirm your understanding of our child safety priorities
+      options:
+        - label: I understand this concern is being reported to protect children
+          required: true
+        - label: I have provided enough detail for the safety team to investigate
+          required: true
+        - label: If this is an immediate emergency, I will call 911 first
+          required: true
+        - label: I consent to follow-up communication about this safety concern
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## What Happens Next?
+        
+        1. **Immediate Review**: Safety team reviews within 2 hours
+        2. **Risk Assessment**: We evaluate the potential impact on children
+        3. **Action Plan**: We develop steps to address the concern
+        4. **Community Update**: Relevant safety improvements shared with community
+        5. **Follow-up**: We'll contact you about resolution and prevention
+        
+        **Thank you for helping us protect children.**

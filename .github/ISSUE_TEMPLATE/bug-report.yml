@@ -1,0 +1,155 @@
+name: 🐛 Bug Report
+description: Report a technical issue or problem that needs fixing
+title: "[BUG] "
+labels: ["🐛 bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+        
+        Thank you for helping us identify and fix issues. Every bug report helps us build more reliable systems to serve families and protect children.
+        
+        **If this bug affects child safety features, please also file a Child Safety Concern.**
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Bug Severity
+      description: How serious is this bug?
+      options:
+        - "🔴 Critical - System unusable or safety features affected"
+        - "🟡 High - Major feature broken, significant user impact"
+        - "🟢 Medium - Feature partially broken, workaround available"
+        - "🔵 Low - Minor issue, cosmetic or minor inconvenience"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly and concisely
+      placeholder: |
+        - What did you expect to happen?
+        - What actually happened instead?
+        - How does this affect your ability to use the system?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Help us reproduce the bug by providing detailed steps
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Enter '....'
+        4. See error
+      value: |
+        1. 
+        2. 
+        3. 
+        4. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should have happened instead?
+      placeholder: "Describe what you expected to happen..."
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Error Messages
+      description: |
+        If applicable, add screenshots or copy error messages to help explain the problem.
+        **Please ensure no personal information is visible in screenshots.**
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: Device Type
+      description: What device were you using?
+      options:
+        - "Desktop Computer"
+        - "Laptop"
+        - "Tablet"
+        - "Mobile Phone"
+        - "Other"
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser (if web-based)
+      description: Which browser were you using?
+      options:
+        - "Chrome"
+        - "Firefox"
+        - "Safari"
+        - "Edge"
+        - "Mobile Safari (iOS)"
+        - "Chrome Mobile (Android)"
+        - "Other"
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or Date
+      description: What version of the software or when did you last access it?
+      placeholder: "e.g., v1.2.3 or 'accessed on January 15, 2025'"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: |
+        - Does this happen every time or just sometimes?
+        - Did this work before? When did it stop working?
+        - Are there any patterns you've noticed?
+        - Any other details that might help us fix this?
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: User Type
+      description: This helps us understand impact and prioritize fixes
+      options:
+        - "Parent/Family Member"
+        - "Child Safety Professional"
+        - "Community Leader"
+        - "Developer/Contributor"
+        - "First-time visitor"
+        - "Prefer not to specify"
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: I have provided clear steps to reproduce the bug
+          required: true
+        - label: I understand this bug report may be shared with our development team
+          required: true
+        - label: If this affects child safety features, I will also file a safety concern
+          required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## What Happens Next?
+        
+        1. **Triage**: Our team will review and categorize the bug within 24 hours
+        2. **Investigation**: Developers will investigate and attempt to reproduce the issue
+        3. **Priority**: Bugs affecting child safety features get highest priority
+        4. **Fix Development**: Solution developed and tested
+        5. **Community Update**: Fix deployed and community notified
+        
+        **Thank you for helping us build more reliable systems for families!**

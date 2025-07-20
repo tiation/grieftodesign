@@ -1,0 +1,142 @@
+name: 💡 Feature Request
+description: Suggest a new feature or improvement to help protect children and support families
+title: "[FEATURE] "
+labels: ["💡 enhancement", "needs-review", "community-input"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Building Together for Child Safety
+        
+        Thank you for helping us build better systems to protect children and support families. 
+        Every feature suggestion is evaluated through our child safety lens:
+        
+        **"Would this feature help protect my own child?"**
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the challenge or need this feature would address
+      placeholder: |
+        - What safety gap or family need does this address?
+        - How are children or families currently affected by this problem?
+        - What makes this solution necessary or important?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your feature idea in detail
+      placeholder: |
+        - How would this feature work?
+        - Who would use it and when?
+        - What would the experience be like for families?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-audience
+    attributes:
+      label: Who would benefit most from this feature?
+      description: Help us understand the primary users
+      options:
+        - "Parents who have lost children"
+        - "Families at risk"
+        - "Child safety professionals"
+        - "Community leaders"
+        - "Educators and caregivers"
+        - "Policy makers"
+        - "All community members"
+        - "Other (please specify below)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Impact on Child Safety
+      description: How directly does this feature relate to protecting children?
+      options:
+        - "🔴 Direct child safety impact - Could prevent harm"
+        - "🟡 Indirect safety impact - Supports protective systems"
+        - "🟢 Community support - Helps families and caregivers"
+        - "🔵 Infrastructure - Enables other safety features"
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: User Stories
+      description: Help us understand how this would work in practice
+      placeholder: |
+        As a [type of user], I want [feature] so that [benefit to child safety/family support].
+        
+        Example scenarios:
+        - When would someone use this feature?
+        - What would their experience be like?
+        - How would this make children safer or families stronger?
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Are there other ways to solve this problem?
+      placeholder: |
+        - Have you seen similar features elsewhere?
+        - What other approaches could work?
+        - Why is your proposed solution the best option?
+
+  - type: textarea
+    id: considerations
+    attributes:
+      label: Safety and Privacy Considerations
+      description: What safety or privacy aspects should we consider?
+      placeholder: |
+        - How would this protect user privacy, especially for children?
+        - Are there any potential safety risks we should address?
+        - What safeguards should be built in?
+
+  - type: checkboxes
+    id: validation
+    attributes:
+      label: Feature Validation
+      description: Please confirm this feature aligns with our mission
+      options:
+        - label: This feature would help protect children or support families affected by loss
+          required: true
+        - label: This feature aligns with trauma-informed, healing-centered approaches
+          required: true
+        - label: I would personally use this feature or recommend it to other families
+          required: true
+        - label: I'm willing to provide feedback during development and testing
+          required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Anything else that would help us understand this feature request?
+      placeholder: |
+        - Personal experience that inspired this idea
+        - Research or evidence supporting this approach
+        - Technical considerations or constraints
+        - Timeline or urgency factors
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Our Feature Development Process
+        
+        1. **Community Review**: Feature requests reviewed by families and safety experts
+        2. **Safety Assessment**: Every feature evaluated for child protection impact
+        3. **Trauma-Informed Design**: Features designed to avoid retraumatization
+        4. **Community Testing**: Beta testing with affected families
+        5. **Iterative Improvement**: Ongoing refinement based on user feedback
+        
+        **Features that pass our child safety test get priority development.**
+        
+        Thank you for helping us build systems that truly serve children and families!

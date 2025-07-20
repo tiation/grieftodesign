@@ -1,0 +1,157 @@
+name: 🤝 Community Support Request
+description: Request support, ask questions, or share experiences with the community
+title: "[SUPPORT] "
+labels: ["🤝 support", "community", "needs-response"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🤝 Community Support
+        
+        Welcome to our supportive community. Whether you're seeking help, sharing experiences, or asking questions, we're here for each other.
+        
+        **If you're in crisis or need immediate help:**
+        - **Emergency**: Call 911 or local emergency services
+        - **Suicide Prevention**: 988 (US) or your local crisis line
+        - **Grief Support**: Contact grief counseling services in your area
+        
+        This form is for community support, questions, and non-crisis assistance.
+
+  - type: dropdown
+    id: support-type
+    attributes:
+      label: What kind of support are you looking for?
+      description: This helps us connect you with the right resources
+      options:
+        - "🧭 Guidance - Need direction or advice"
+        - "💬 Connection - Want to talk with others who understand"
+        - "📚 Resources - Looking for specific information or tools"
+        - "🤲 Help - Need assistance with something specific"
+        - "💝 Sharing - Want to share experience or offer support to others"
+        - "❓ Questions - Have questions about our work or resources"
+        - "Other - Please describe below"
+    validations:
+      required: true
+
+  - type: textarea
+    id: request-description
+    attributes:
+      label: How can we support you?
+      description: Share what you're looking for or going through (only what feels comfortable)
+      placeholder: |
+        - What kind of support would be helpful?
+        - What questions do you have?
+        - What would make this a little easier for you?
+        
+        Remember: Only share what feels safe and comfortable. 
+        You don't need to share personal details.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: community-role
+    attributes:
+      label: How do you connect with our mission?
+      description: This helps us understand your perspective (optional)
+      options:
+        - "Parent who has experienced child loss"
+        - "Family member affected by tragedy"
+        - "Friend or supporter of affected families"
+        - "Child safety professional"
+        - "Community member who cares about child protection"
+        - "Person interested in prevention and safety"
+        - "Prefer not to specify"
+        - "Other"
+
+  - type: checkboxes
+    id: support-preferences
+    attributes:
+      label: What types of support interest you? (Optional)
+      options:
+        - label: "Connecting with other families who understand"
+        - label: "Information about child safety and prevention"
+        - label: "Resources for grief and healing"
+        - label: "Ways to get involved in advocacy or change-making"
+        - label: "Training or educational opportunities"
+        - label: "Community events and gatherings"
+        - label: "One-on-one support or mentoring"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context (Optional)
+      description: Anything else that would help us provide better support?
+      placeholder: |
+        - Are there specific challenges you're facing?
+        - Have you found any resources particularly helpful?
+        - Is there anything you wish existed but can't find?
+        - How long have you been part of our community?
+
+  - type: dropdown
+    id: response-preference
+    attributes:
+      label: How would you prefer to receive support?
+      options:
+        - "Public response on this issue (others can see and benefit)"
+        - "Private email response"
+        - "Connection to community member or mentor"
+        - "Information about support groups or resources"
+        - "Follow-up to discuss further"
+        - "No response needed - just wanted to share"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy-consent
+    attributes:
+      label: Privacy and Connection
+      options:
+        - label: "I'm comfortable with community members seeing this request for support"
+          required: false
+        - label: "I consent to being connected with other community members for mutual support"
+          required: false
+        - label: "I'm open to sharing my experience to help others (if and when I'm ready)"
+          required: false
+        - label: "I would like information about local support resources in my area"
+          required: false
+
+  - type: textarea
+    id: help-others
+    attributes:
+      label: How might you be able to support others? (Optional)
+      description: Sometimes helping others helps us heal too
+      placeholder: |
+        - Do you have experiences that might help other families?
+        - Are there skills or knowledge you could share?
+        - Would you be interested in peer support roles?
+        - What has helped you that might help others?
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Our Support Philosophy
+        
+        - **You are not alone** - This community understands what you're going through
+        - **Healing happens in community** - We support each other's journey
+        - **Every story matters** - Your experience has value and can help others
+        - **Take your time** - Healing doesn't happen on anyone else's timeline
+        - **Your needs matter** - We'll work to connect you with appropriate resources
+        
+        ## What Happens Next?
+        
+        1. **Acknowledgment**: You'll receive a response within 24 hours
+        2. **Connection**: We'll connect you with appropriate community support
+        3. **Resources**: Relevant information and resources shared
+        4. **Follow-up**: Ongoing support as desired and appropriate
+        5. **Community**: Invitation to join community activities if interested
+        
+        **Remember: Asking for support is a sign of strength, not weakness.**
+        
+        ## Immediate Resources
+        
+        - **Crisis Support**: 988 (Suicide & Crisis Lifeline)
+        - **Grief Support**: compassionatefriends.org
+        - **Child Loss**: griefshare.org
+        - **24/7 Crisis Text**: Text HOME to 741741
+        
+        Thank you for being part of our community. We're honored to walk this journey with you.
